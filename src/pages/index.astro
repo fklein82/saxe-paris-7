@@ -17,7 +17,7 @@ const photos = [
   { src: img('entrance.jpg'), alt: 'Entrée indépendante avec porte cochère' },
   { src: img('hallway.jpg'), alt: 'Couloir d\'entrée avec rangements' },
   { src: img('classic-doors.jpg'), alt: 'Portes vitrées classiques haussmanniennes' },
-  { src: img('eiffel-tower-day.jpg'), alt: 'Vue sur la Tour Eiffel depuis l\'avenue de Saxe' },
+  { src: img('eiffel-tower-day.jpg'), alt: 'Vue sur la Tour Eiffel depuis le 7e arrondissement' },
   { src: img('eiffel-tower-night.jpg'), alt: 'Tour Eiffel illuminée vue depuis l\'avenue' },
 ];
 
@@ -47,7 +47,7 @@ const recommandations = [
   <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 transition-all">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
       <a href="#" class="font-serif text-lg sm:text-xl font-semibold text-charcoal tracking-tight">
-        Avenue de Saxe
+        Paris 7<sup>e</sup>
       </a>
       <div class="hidden md:flex items-center gap-8 text-sm font-medium text-warm-gray">
         <a href="#appartement" class="hover:text-gold transition-colors">L'appartement</a>
@@ -66,19 +66,19 @@ const recommandations = [
     <div class="absolute inset-0">
       <img
         src={img('salon-overview.jpg')}
-        alt="Salon de l'appartement avenue de Saxe"
+        alt="Salon de l'appartement Paris 7e"
         class="w-full h-full object-cover"
         loading="eager"
       />
       <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60"></div>
     </div>
     <div class="relative z-10 text-center text-white px-4 max-w-3xl mx-auto">
-      <p class="text-sm sm:text-base uppercase tracking-[0.25em] mb-4 text-white/80 font-medium">Avenue de Saxe</p>
+      <p class="text-sm sm:text-base uppercase tracking-[0.25em] mb-4 text-white/80 font-medium">Appartement meublé de charme</p>
       <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight mb-6">
         Paris 7<sup>e</sup>
       </h1>
       <p class="text-lg sm:text-xl text-white/90 mb-8 font-light max-w-xl mx-auto">
-        Appartement meublé de charme avec vue sur la Tour Eiffel, au cœur d'un quartier résidentiel élégant.
+        Sur une belle avenue du 7<sup>e</sup> arrondissement, à deux pas de la Tour Eiffel et des Invalides.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a href="#contact" class="bg-gold hover:bg-gold-light text-white px-8 py-3.5 rounded-full text-base font-medium transition-colors">
@@ -122,7 +122,7 @@ const recommandations = [
           </p>
           <div class="flex items-center gap-2 text-gold font-medium">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-            Dans la belle avenue de Saxe, 75007 Paris
+            7<sup>e</sup> arrondissement de Paris
           </div>
         </div>
       </div>
@@ -304,17 +304,17 @@ const recommandations = [
       <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
         <div class="space-y-6">
           <p class="text-warm-gray leading-relaxed text-lg">
-            L'avenue de Saxe est l'une des plus belles avenues haussmanniennes du 7<sup>e</sup> arrondissement, ouverte au XIX<sup>e</sup> siècle. Large et arborée, elle offre une <strong class="text-charcoal font-medium">perspective remarquable sur la Tour Eiffel</strong>.
+            L'appartement se situe sur l'une des plus belles avenues haussmanniennes du 7<sup>e</sup> arrondissement. Large et arborée, elle offre une <strong class="text-charcoal font-medium">perspective remarquable sur la Tour Eiffel</strong>.
           </p>
           <p class="text-warm-gray leading-relaxed text-lg">
-            Chaque jeudi et samedi, elle accueille le <strong class="text-charcoal font-medium">marché de Saxe</strong>, l'un des marchés les plus réputés de Paris, où se mêlent produits frais, artisans et ambiance typiquement parisienne.
+            Chaque semaine, le quartier accueille l'un des <strong class="text-charcoal font-medium">marchés les plus réputés de Paris</strong>, où se mêlent produits frais, artisans et ambiance typiquement parisienne.
           </p>
           <p class="text-warm-gray leading-relaxed text-lg">
             Le quartier est résidentiel, calme et élégant. À quelques pas des Invalides et du Champ de Mars, c'est un lieu privilégié pour vivre Paris comme un Parisien.
           </p>
         </div>
         <div class="space-y-4">
-          <img src={img('eiffel-tower-day.jpg')} alt="Vue Tour Eiffel depuis l'avenue de Saxe" class="rounded-2xl shadow-lg w-full" loading="lazy" />
+          <img src={img('eiffel-tower-day.jpg')} alt="Vue Tour Eiffel depuis le 7e arrondissement" class="rounded-2xl shadow-lg w-full" loading="lazy" />
           <img src={img('eiffel-tower-night.jpg')} alt="Tour Eiffel de nuit depuis l'avenue" class="rounded-2xl shadow-lg w-full" loading="lazy" />
         </div>
       </div>
@@ -457,10 +457,9 @@ const recommandations = [
     <div class="max-w-5xl mx-auto">
       <div class="grid sm:grid-cols-3 gap-8 mb-8">
         <div>
-          <p class="font-serif text-lg text-white mb-3">Avenue de Saxe</p>
+          <p class="font-serif text-lg text-white mb-3">Paris 7<sup>e</sup></p>
           <p class="text-sm leading-relaxed">
             Appartement meublé 3 pièces<br>
-            Avenue de Saxe<br>
             75007 Paris
           </p>
         </div>
@@ -484,7 +483,7 @@ const recommandations = [
         </div>
       </div>
       <div class="border-t border-white/10 pt-8 text-center text-xs text-white/40">
-        <p>&copy; {new Date().getFullYear()} — Appartement Avenue de Saxe, Paris 7e</p>
+        <p>&copy; {new Date().getFullYear()} — Appartement meublé, Paris 7e</p>
       </div>
     </div>
   </footer>
