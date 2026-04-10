@@ -56,6 +56,7 @@ const recommandations = [
         <a href="#quartier" class="hover:text-gold transition-colors">Quartier</a>
         <a href="#tarifs" class="hover:text-gold transition-colors">Tarifs</a>
         <a href="#disponibilites" class="hover:text-gold transition-colors">Disponibilités</a>
+        <a href="#contact" class="hover:text-gold transition-colors">Contact</a>
       </div>
       <div class="flex items-center gap-3">
         <a href="#contact" class="bg-gold text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-gold-light transition-colors">
@@ -410,8 +411,47 @@ const recommandations = [
     </div>
   </section>
 
+  <!-- Tarifs -->
+  <section id="tarifs" class="py-20 sm:py-28 bg-cream px-4">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-gold uppercase tracking-[0.2em] text-sm font-medium mb-3">Tarifs</p>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-charcoal mb-6">Un tarif très avantageux</h2>
+        <div class="w-16 h-px bg-gold mx-auto mb-8"></div>
+        <p class="text-warm-gray text-lg max-w-2xl mx-auto leading-relaxed">
+          Pour un appartement de ce standing dans le 7<sup>e</sup> arrondissement, nos tarifs sont <strong class="text-charcoal font-medium">parmi les plus compétitifs du quartier</strong>.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-3 gap-6 mb-10">
+        <div class="bg-white rounded-2xl p-8 text-center shadow-sm">
+          <div class="text-3xl mb-3">📅</div>
+          <h3 class="font-serif text-lg text-charcoal mb-2">Tarif dégressif</h3>
+          <p class="text-warm-gray text-sm leading-relaxed">Plus votre séjour est long, plus le tarif à la nuit diminue.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-8 text-center shadow-sm">
+          <div class="text-3xl mb-3">🌤️</div>
+          <h3 class="font-serif text-lg text-charcoal mb-2">Prix selon la saison</h3>
+          <p class="text-warm-gray text-sm leading-relaxed">Le tarif s'adapte en fonction de la période de l'année.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-8 text-center shadow-sm">
+          <div class="text-3xl mb-3">💬</div>
+          <h3 class="font-serif text-lg text-charcoal mb-2">Devis sur mesure</h3>
+          <p class="text-warm-gray text-sm leading-relaxed">Contactez-moi avec vos dates pour recevoir un tarif personnalisé.</p>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <a href="#contact" class="inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-white px-8 py-3.5 rounded-full font-medium transition-colors">
+          Demander un tarif
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- Disponibilités -->
-  <section id="disponibilites" class="py-20 sm:py-28 bg-cream px-4">
+  <section id="disponibilites" class="py-20 sm:py-28 px-4">
     <div class="max-w-4xl mx-auto">
       <div class="text-center mb-16">
         <p class="text-gold uppercase tracking-[0.2em] text-sm font-medium mb-3">Planifier</p>
@@ -440,47 +480,8 @@ const recommandations = [
     </div>
   </section>
 
-  <!-- Tarifs -->
-  <section id="tarifs" class="py-20 sm:py-28 px-4">
-    <div class="max-w-4xl mx-auto">
-      <div class="text-center mb-16">
-        <p class="text-gold uppercase tracking-[0.2em] text-sm font-medium mb-3">Tarifs</p>
-        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-charcoal mb-6">Un tarif très avantageux</h2>
-        <div class="w-16 h-px bg-gold mx-auto mb-8"></div>
-        <p class="text-warm-gray text-lg max-w-2xl mx-auto leading-relaxed">
-          Pour un appartement de ce standing dans le 7<sup>e</sup> arrondissement, nos tarifs sont <strong class="text-charcoal font-medium">parmi les plus compétitifs du quartier</strong>.
-        </p>
-      </div>
-
-      <div class="grid sm:grid-cols-3 gap-6 mb-10">
-        <div class="bg-cream rounded-2xl p-8 text-center">
-          <div class="text-3xl mb-3">📅</div>
-          <h3 class="font-serif text-lg text-charcoal mb-2">Tarif dégressif</h3>
-          <p class="text-warm-gray text-sm leading-relaxed">Plus votre séjour est long, plus le tarif à la nuit diminue.</p>
-        </div>
-        <div class="bg-cream rounded-2xl p-8 text-center">
-          <div class="text-3xl mb-3">🌤️</div>
-          <h3 class="font-serif text-lg text-charcoal mb-2">Prix selon la saison</h3>
-          <p class="text-warm-gray text-sm leading-relaxed">Le tarif s'adapte en fonction de la période de l'année.</p>
-        </div>
-        <div class="bg-cream rounded-2xl p-8 text-center">
-          <div class="text-3xl mb-3">💬</div>
-          <h3 class="font-serif text-lg text-charcoal mb-2">Devis sur mesure</h3>
-          <p class="text-warm-gray text-sm leading-relaxed">Contactez-moi avec vos dates pour recevoir un tarif personnalisé.</p>
-        </div>
-      </div>
-
-      <div class="text-center">
-        <a href="#contact" class="inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-white px-8 py-3.5 rounded-full font-medium transition-colors">
-          Demander un tarif
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
   <!-- Contact / Réserver -->
-  <section id="contact" class="py-20 sm:py-28 px-4">
+  <section id="contact" class="py-20 sm:py-28 bg-cream px-4">
     <div class="max-w-4xl mx-auto">
       <div class="text-center mb-16">
         <p class="text-gold uppercase tracking-[0.2em] text-sm font-medium mb-3">Intéressé ?</p>
@@ -693,5 +694,20 @@ const recommandations = [
       if (e.key === 'ArrowRight') nextPhoto();
       if (e.key === 'ArrowLeft') prevPhoto();
     });
+
+    // Swipe tactile pour mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+    lightbox.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    lightbox.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const diff = touchStartX - touchEndX;
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) nextPhoto();
+        else prevPhoto();
+      }
+    }, { passive: true });
   </script>
 </Layout>
