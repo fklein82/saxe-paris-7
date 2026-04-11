@@ -5,20 +5,20 @@ const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL :
 const img = (name: string) => `${base}images/${name}`;
 
 const photos = [
-  { src: img('salon-overview.jpg'), alt: 'Salon lumineux avec moulures haussmanniennes et cuisine ouverte', altEn: 'Bright living room with Haussmann mouldings and open kitchen' },
-  { src: img('salon-dining.jpg'), alt: 'Espace repas avec table ronde et vue sur la cuisine', altEn: 'Dining area with round table and kitchen view' },
-  { src: img('salon-sofa.jpg'), alt: 'Canapé confortable avec vue sur les arbres de l\'avenue', altEn: 'Comfortable sofa with view of the tree-lined avenue' },
-  { src: img('salon-evening.jpg'), alt: 'Ambiance du salon en soirée', altEn: 'Living room evening ambiance' },
-  { src: img('kitchen.jpg'), alt: 'Cuisine équipée en bois et marbre', altEn: 'Fully equipped wood and marble kitchen' },
-  { src: img('bedroom-double.jpg'), alt: 'Chambre avec lit double', altEn: 'Bedroom with double bed' },
-  { src: img('bedroom-single.jpg'), alt: 'Chambre avec lit simple', altEn: 'Bedroom with single bed' },
-  { src: img('bathroom-main.jpg'), alt: 'Salle de bain avec douche à l\'italienne', altEn: 'Bathroom with walk-in shower' },
-  { src: img('bathroom-washing.jpg'), alt: 'Salle de bain avec lave-linge', altEn: 'Bathroom with washing machine' },
-  { src: img('entrance.jpg'), alt: 'Entrée indépendante avec porte cochère', altEn: 'Private entrance with carriage door' },
-  { src: img('hallway.jpg'), alt: 'Couloir d\'entrée avec rangements', altEn: 'Entrance hallway with storage' },
-  { src: img('classic-doors.jpg'), alt: 'Portes vitrées classiques haussmanniennes', altEn: 'Classic Haussmann glass doors' },
-  { src: img('eiffel-tower-day.jpg'), alt: 'Vue sur la Tour Eiffel depuis le 7e arrondissement', altEn: 'Eiffel Tower view from the 7th arrondissement' },
-  { src: img('eiffel-tower-night.jpg'), alt: 'Tour Eiffel illuminée vue depuis l\'avenue', altEn: 'Illuminated Eiffel Tower seen from the avenue' },
+  { src: img('salon-overview.jpg'), alt: 'Salon lumineux avec moulures haussmanniennes et cuisine ouverte', altEn: 'Bright living room with Haussmann mouldings and open kitchen', altMg: 'Efitrano fandraisam-bahiny mazava miaraka amin\'ny lakozia misokatra' },
+  { src: img('salon-dining.jpg'), alt: 'Espace repas avec table ronde et vue sur la cuisine', altEn: 'Dining area with round table and kitchen view', altMg: 'Toerana fisakafoanana miaraka amin\'ny latabatra boribory' },
+  { src: img('salon-sofa.jpg'), alt: 'Canapé confortable avec vue sur les arbres de l\'avenue', altEn: 'Comfortable sofa with view of the tree-lined avenue', altMg: 'Sofa mampiadana miaraka amin\'ny fijery ny hazo eny amin\'ny arabe' },
+  { src: img('salon-evening.jpg'), alt: 'Ambiance du salon en soirée', altEn: 'Living room evening ambiance', altMg: 'Toe-javatra amin\'ny efitrano fandraisam-bahiny amin\'ny hariva' },
+  { src: img('kitchen.jpg'), alt: 'Cuisine équipée en bois et marbre', altEn: 'Fully equipped wood and marble kitchen', altMg: 'Lakozia feno fitaovana hazo sy marbra' },
+  { src: img('bedroom-double.jpg'), alt: 'Chambre avec lit double', altEn: 'Bedroom with double bed', altMg: 'Efitrano misy fandriana roa' },
+  { src: img('bedroom-single.jpg'), alt: 'Chambre avec lit simple', altEn: 'Bedroom with single bed', altMg: 'Efitrano misy fandriana tokana' },
+  { src: img('bathroom-main.jpg'), alt: 'Salle de bain avec douche à l\'italienne', altEn: 'Bathroom with walk-in shower', altMg: 'Efitrano fandroana misy douche italianina' },
+  { src: img('bathroom-washing.jpg'), alt: 'Salle de bain avec lave-linge', altEn: 'Bathroom with washing machine', altMg: 'Efitrano fandroana misy milina fanasan-damba' },
+  { src: img('entrance.jpg'), alt: 'Entrée indépendante avec porte cochère', altEn: 'Private entrance with carriage door', altMg: 'Fidirana manokana misy varavarana lehibe' },
+  { src: img('hallway.jpg'), alt: 'Couloir d\'entrée avec rangements', altEn: 'Entrance hallway with storage', altMg: 'Lalantsara fidirana misy fitehirizana' },
+  { src: img('classic-doors.jpg'), alt: 'Portes vitrées classiques haussmanniennes', altEn: 'Classic Haussmann glass doors', altMg: 'Varavarana fitaratra haussmannianina' },
+  { src: img('eiffel-tower-day.jpg'), alt: 'Vue sur la Tour Eiffel depuis le 7e arrondissement', altEn: 'Eiffel Tower view from the 7th arrondissement', altMg: 'Fijery ny Tour Eiffel avy amin\'ny arrondissement faha-7' },
+  { src: img('eiffel-tower-night.jpg'), alt: 'Tour Eiffel illuminée vue depuis l\'avenue', altEn: 'Illuminated Eiffel Tower seen from the avenue', altMg: 'Tour Eiffel mirehitra hita avy amin\'ny arabe' },
 ];
 
 const equipements = [
@@ -60,10 +60,27 @@ const recommandations = [
       </div>
       <div class="flex items-center gap-3">
         <!-- Language switcher -->
-        <button id="lang-toggle" class="flex items-center gap-1 text-sm font-medium text-warm-gray hover:text-gold transition-colors px-2 py-1 rounded-lg border border-gray-200 hover:border-gold" aria-label="Switch language">
-          <span id="lang-label">FR</span>
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-        </button>
+        <div class="relative" id="lang-switcher">
+          <button id="lang-toggle" class="flex items-center gap-1.5 text-sm font-medium text-warm-gray hover:text-gold transition-colors px-2.5 py-1.5 rounded-lg border border-gray-200 hover:border-gold" aria-label="Switch language" aria-expanded="false">
+            <span id="lang-flag">🇫🇷</span>
+            <span id="lang-label">FR</span>
+            <svg class="w-3.5 h-3.5 transition-transform" id="lang-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </button>
+          <div id="lang-dropdown" class="absolute right-0 top-full mt-1 bg-white rounded-xl shadow-lg border border-gray-100 py-1 min-w-[160px] hidden z-50 overflow-hidden">
+            <button data-lang="fr" class="lang-option flex items-center gap-3 w-full px-4 py-2.5 text-sm text-left hover:bg-cream transition-colors">
+              <span class="text-base">🇫🇷</span>
+              <span class="font-medium text-charcoal">Français</span>
+            </button>
+            <button data-lang="en" class="lang-option flex items-center gap-3 w-full px-4 py-2.5 text-sm text-left hover:bg-cream transition-colors">
+              <span class="text-base">🇬🇧</span>
+              <span class="font-medium text-charcoal">English</span>
+            </button>
+            <button data-lang="mg" class="lang-option flex items-center gap-3 w-full px-4 py-2.5 text-sm text-left hover:bg-cream transition-colors">
+              <span class="text-base">🇲🇬</span>
+              <span class="font-medium text-charcoal">Malagasy</span>
+            </button>
+          </div>
+        </div>
         <a href="#contact" class="bg-gold text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-gold-light transition-colors" data-i18n="nav.book">
           Réserver
         </a>
@@ -93,6 +110,8 @@ const recommandations = [
         src={img('salon-overview.jpg')}
         alt="Salon de l'appartement Paris 7e"
         class="w-full h-full object-cover"
+        width="1600"
+        height="1200"
         loading="eager"
       />
       <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60"></div>
@@ -158,7 +177,7 @@ const recommandations = [
 
       <div class="grid md:grid-cols-2 gap-8 items-center mb-16">
         <div>
-          <img src={img('salon-dining.jpg')} alt="Salon et coin repas" class="rounded-2xl shadow-lg w-full" loading="lazy" />
+          <img src={img('salon-dining.jpg')} alt="Salon et coin repas" class="rounded-2xl shadow-lg w-full" width="1600" height="1200" loading="lazy" />
         </div>
         <div class="space-y-6">
           <h3 class="font-serif text-2xl text-charcoal" data-i18n="apt.interior_title">Un intérieur soigné</h3>
@@ -244,6 +263,73 @@ const recommandations = [
     </div>
   </section>
 
+  <!-- Témoignages -->
+  <section class="py-20 sm:py-28 bg-cream px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-gold uppercase tracking-[0.2em] text-sm font-medium mb-3" data-i18n="reviews.subtitle">Témoignages</p>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-charcoal mb-6" data-i18n="reviews.title">Ce qu'en disent nos voyageurs</h2>
+        <div class="w-16 h-px bg-gold mx-auto"></div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+          <div class="flex gap-1 mb-4 text-gold">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-warm-gray leading-relaxed mb-6 italic" data-i18n="reviews.r1.text">"Un appartement magnifique, exactement comme sur les photos. L'emplacement est parfait, à deux pas de la Tour Eiffel. Nous avons adoré le quartier et le marché. On reviendra !"</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center text-gold font-semibold text-sm">SC</div>
+            <div>
+              <p class="font-medium text-charcoal text-sm">Sophie & Christophe</p>
+              <p class="text-warm-gray text-xs" data-i18n="reviews.r1.origin">Lyon, France</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+          <div class="flex gap-1 mb-4 text-gold">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-warm-gray leading-relaxed mb-6 italic" data-i18n="reviews.r2.text">"Perfect location and a beautifully renovated apartment. The kitchen was great for cooking and the neighbourhood has wonderful restaurants. Highly recommended!"</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center text-gold font-semibold text-sm">JM</div>
+            <div>
+              <p class="font-medium text-charcoal text-sm">James & Mary</p>
+              <p class="text-warm-gray text-xs" data-i18n="reviews.r2.origin">London, UK</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+          <div class="flex gap-1 mb-4 text-gold">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-warm-gray leading-relaxed mb-6 italic" data-i18n="reviews.r3.text">"Trano tena tsara! Madio, feno fitaovana ary toerana tena mahafinaritra. Ny tompony dia tsara fanahy sy mora ifandraisana. Tena misy vidy tokoa."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center text-gold font-semibold text-sm">NR</div>
+            <div>
+              <p class="font-medium text-charcoal text-sm">Naina & Rova</p>
+              <p class="text-warm-gray text-xs" data-i18n="reviews.r3.origin">Antananarivo, Madagascar</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Galerie -->
   <section id="galerie" class="py-20 sm:py-28 bg-cream px-4">
     <div class="max-w-6xl mx-auto">
@@ -269,7 +355,10 @@ const recommandations = [
               alt={photo.alt}
               data-alt-fr={photo.alt}
               data-alt-en={photo.altEn}
+              data-alt-mg={photo.altMg}
               class="w-full h-full object-cover aspect-[4/3] group-hover:scale-105 transition-transform duration-500"
+              width="1600"
+              height="1200"
               loading="lazy"
             />
             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-end">
@@ -361,8 +450,8 @@ const recommandations = [
           </p>
         </div>
         <div class="space-y-4">
-          <img src={img('eiffel-tower-day.jpg')} alt="Vue Tour Eiffel depuis le 7e arrondissement" class="rounded-2xl shadow-lg w-full" loading="lazy" />
-          <img src={img('eiffel-tower-night.jpg')} alt="Tour Eiffel de nuit depuis l'avenue" class="rounded-2xl shadow-lg w-full" loading="lazy" />
+          <img src={img('eiffel-tower-day.jpg')} alt="Vue Tour Eiffel depuis le 7e arrondissement" class="rounded-2xl shadow-lg w-full" width="1600" height="1200" loading="lazy" />
+          <img src={img('eiffel-tower-night.jpg')} alt="Tour Eiffel de nuit depuis l'avenue" class="rounded-2xl shadow-lg w-full" width="1600" height="1200" loading="lazy" />
         </div>
       </div>
 
@@ -386,6 +475,20 @@ const recommandations = [
             <p class="text-warm-gray text-sm" data-i18n="hood.line6">Ligne 6</p>
           </div>
         </div>
+      </div>
+
+      <!-- Carte -->
+      <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+        <h3 class="font-serif text-2xl text-charcoal mb-0 text-center pt-8 pb-4" data-i18n="hood.map_title">Localisation</h3>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13100!2d2.3050!3d48.8566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fdc0cec6e5d%3A0x406f69c2f411cf0!2s75007%20Paris!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr"
+          class="w-full border-0"
+          style="height: 400px;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Carte du 7e arrondissement de Paris"
+        ></iframe>
       </div>
     </div>
   </section>
@@ -685,6 +788,14 @@ const recommandations = [
         'equip.item6.label': 'Washing machine',
         'equip.item7.label': 'Private entrance',
         'equip.item7.detail': 'Carriage door on the avenue',
+        'reviews.subtitle': 'Testimonials',
+        'reviews.title': 'What our guests say',
+        'reviews.r1.text': '"A magnificent apartment, exactly as shown in the photos. The location is perfect, steps from the Eiffel Tower. We loved the neighbourhood and the market. We\'ll be back!"',
+        'reviews.r1.origin': 'Lyon, France',
+        'reviews.r2.text': '"Perfect location and a beautifully renovated apartment. The kitchen was great for cooking and the neighbourhood has wonderful restaurants. Highly recommended!"',
+        'reviews.r2.origin': 'London, UK',
+        'reviews.r3.text': '"An amazing apartment! Clean, fully equipped and a wonderful location. The owner is kind and easy to reach. Truly great value."',
+        'reviews.r3.origin': 'Antananarivo, Madagascar',
         'gallery.subtitle': 'Virtual tour',
         'gallery.title': 'Photo gallery',
         'video.subtitle': 'Immersion',
@@ -702,6 +813,7 @@ const recommandations = [
         'hood.line': 'Line 10',
         'hood.line13': 'Line 13',
         'hood.line6': 'Line 6',
+        'hood.map_title': 'Location',
         'reco.subtitle': 'Our favorites',
         'reco.title': 'Best addresses',
         'reco.map': 'View on map',
@@ -745,6 +857,125 @@ const recommandations = [
         'footer.nav': 'Navigation',
         'footer.gallery': 'Photo gallery',
         'footer.copy': 'Furnished apartment, Paris 7th',
+      },
+      mg: {
+        'nav.apartment': 'Ny trano',
+        'nav.photos': 'Sary',
+        'nav.video': 'Horonantsary',
+        'nav.neighborhood': 'Manodidina',
+        'nav.rates': 'Vidin\'ny hofan-trano',
+        'nav.availability': 'Fotoana malalaka',
+        'nav.book': 'Hanokatra',
+        'hero.subtitle': 'Trano misy fanaka kanto',
+        'hero.desc': 'Eo amin\'ny arabe tsara tarehy ao amin\'ny arrondissement faha-7<sup>e</sup>, akaikin\'ny Tour Eiffel sy ny Invalides.',
+        'hero.cta': 'Hanokatra ity trano ity',
+        'hero.discover': 'Hijery',
+        'apt.welcome': 'Tongasoa',
+        'apt.title': 'Ny trano',
+        'apt.desc': 'Trano tsara tarehy misy efitrano 3, nohavaozina tanteraka, ao afovoan\'ny arrondissement faha-7<sup>e</sup> ao Paris. Mazava, mangina ary mety tsara, manome ny fahafinaretana rehetra toy ny trano tena izy any Parisy.',
+        'apt.rooms': 'efitrano',
+        'apt.bedrooms': 'efitrano fatoriana',
+        'apt.area': 'velarantany',
+        'apt.guests': 'olona',
+        'apt.interior_title': 'Anatiny voaravaka tsara',
+        'apt.interior_desc1': 'Ny trano dia mampifandray ny hakanton\'ny haussmannianina — ravaka, gorodona hazo, rihana avo — amin\'ny fanarenana maoderina miaraka amin\'ny lakozia misokatra hazo sy marbra, efitrano fandroana vaovao ary fanaka tsara kalitao.',
+        'apt.interior_desc2': 'Ny fidirana dia manokana tanteraka, azo idirana mivantana avy amin\'ny arabe amin\'ny alalan\'ny varavarana lehibe. Tombontsoa tena izy ho an\'ny tsiambaratelon\'ao sy ny fahafinaretanao.',
+        'apt.location': 'Arrondissement faha-7<sup>e</sup> ao Paris',
+        'sleep.subtitle': 'Fahafinaretana',
+        'sleep.title': 'Ny fandriana',
+        'sleep.main_title': 'Efitrano fatoriana lehibe',
+        'sleep.main_desc': 'Fandriana roa lehibe mampiadana, mety ho an\'ny mpivady.',
+        'sleep.second_title': 'Efitrano fatoriana fanampiny',
+        'sleep.second_desc': 'Fandriana tokana ao amin\'ny toerana mangina sy mafana.',
+        'sleep.extra_title': 'Fandriana fanampiny',
+        'sleep.extra_desc': 'Fandriana azo avelarina sy matela azo tsofina omena rehefa mangataka.',
+        'sleep.capacity_title': 'Fahafahana mandray vahiny',
+        'sleep.optimal': 'olona<br><span class="font-medium text-charcoal">Fahafinaretana feno</span>',
+        'sleep.extended': 'olona<br><span class="font-medium text-charcoal">Fandrindrana allargée</span>',
+        'sleep.capacity_desc': 'Ny trano dia mety indrindra ho an\'ny olona 2 ka hatramin\'ny 3. Afaka mandray hatramin\'ny olona 6 amin\'ny fandriana fanampiny, mety tsara ho an\'ny fianakaviana na mpinamana.',
+        'equip.subtitle': 'Efa voaomana daholo',
+        'equip.title': 'Ny fitaovana',
+        'equip.item0.label': 'Lakozia feno fitaovana',
+        'equip.item0.detail': 'Fourno, fatana, micro-ondes',
+        'equip.item1.label': 'Milina fanasan-dovia',
+        'equip.item2.label': 'Milina Nespresso',
+        'equip.item3.label': 'Fahitalavitra',
+        'equip.item4.label': 'Wi-Fi fibre',
+        'equip.item4.detail': 'Haingam-pandeha avo',
+        'equip.item5.label': 'Lamba sy servieta',
+        'equip.item5.detail': 'Omena',
+        'equip.item6.label': 'Milina fanasan-damba',
+        'equip.item7.label': 'Fidirana manokana',
+        'equip.item7.detail': 'Varavarana lehibe eo amin\'ny arabe',
+        'reviews.subtitle': 'Fijoroana vavolombelona',
+        'reviews.title': 'Izay lazain\'ny vahininay',
+        'reviews.r1.text': '"Trano kanto, mitovy tanteraka amin\'ny sary. Ny toerana dia tonga lafatra, akaikin\'ny Tour Eiffel. Tena tianay ny manodidina sy ny tsena. Hiverina izahay!"',
+        'reviews.r1.origin': 'Lyon, Frantsa',
+        'reviews.r2.text': '"Toerana tonga lafatra ary trano nohavaozina tsara. Ny lakozia dia tsara ho an\'ny mahandro ary ny manodidina dia misy trano fisakafoanana mahafinaritra. Tena soso-kevitra!"',
+        'reviews.r2.origin': 'London, Angletera',
+        'reviews.r3.text': '"Trano tena tsara! Madio, feno fitaovana ary toerana tena mahafinaritra. Ny tompony dia tsara fanahy sy mora ifandraisana. Tena misy vidy tokoa."',
+        'reviews.r3.origin': 'Antananarivo, Madagasikara',
+        'gallery.subtitle': 'Fitsidihana virtoaly',
+        'gallery.title': 'Galeria sary',
+        'video.subtitle': 'Firotsahana anaty',
+        'video.title': 'Fitsidihana horonantsary',
+        'video.explore_title': 'Tsidiho ny trano',
+        'video.explore_desc': 'Fantaro ny efitrano tsirairay ao amin\'ny trano toy ny hoe ao ianao. Ity fitsidihana voatari-dalana ity dia manome fijery feno ny efitrano fandraisam-bahiny, ny lakozia, ny efitrano fatoriana ary ny efitrano fandroana.',
+        'video.explore_cta': 'Tsindrio ny play mba hanombohana ny fitsidihana.',
+        'video.contact_btn': 'Hifandray amiko',
+        'hood.subtitle': 'Toerana',
+        'hood.title': 'Ny manodidina',
+        'hood.desc1': 'Ny trano dia miorina eo amin\'ny iray amin\'ireo arabe haussmannianina tsara indrindra ao amin\'ny arrondissement faha-7<sup>e</sup>. Malalaka sy be hazo, manome <strong class="text-charcoal font-medium">fijery miavaka ny Tour Eiffel</strong>.',
+        'hood.desc2': 'Isan-kerinandro, ny manodidina dia mandray ny iray amin\'ireo <strong class="text-charcoal font-medium">tsena malaza indrindra ao Paris</strong>, ahitana vokatra vaovao, mpanao asa tanana ary toe-javatra tena parisianina.',
+        'hood.desc3': 'Ny manodidina dia toerana fonenan\'olona, mangina ary kanto. Akaikin\'ny Invalides sy ny Champ de Mars, toerana manokana iainana an\'i Paris toy ny Parisianina.',
+        'hood.transport_title': 'Fitaterana akaiky',
+        'hood.line': 'Andalana 10',
+        'hood.line13': 'Andalana 13',
+        'hood.line6': 'Andalana 6',
+        'hood.map_title': 'Toerana',
+        'reco.subtitle': 'Ireo tianay indrindra',
+        'reco.title': 'Adiresy tsara',
+        'reco.map': 'Hijery amin\'ny sarintany',
+        'reco.item0.type': 'Bistro eo an-toerana',
+        'reco.item0.desc': 'Sakafo vita an-trano sy sakafo entina.',
+        'reco.item1.type': 'Brasserie eo an-toerana',
+        'reco.item1.desc': 'Brasserie mamy sy tena izy.',
+        'reco.item2.type': 'Brasserie gastronomika',
+        'reco.item2.desc': 'Sakafo tena tsara. Tsara raha manokatra mialoha.',
+        'reco.item3.type': 'Café misy fijery tsara',
+        'reco.item3.desc': 'Tena mety ho an\'ny kafe maraina, manandrify ny Invalides.',
+        'reco.item4.type': 'Boulangerie',
+        'reco.item4.desc': 'Mofo sy viennoiserie miavaka.',
+        'reco.item5.type': 'Tsena',
+        'reco.item5.desc': 'Akaikin\'ny trano, vidiny mety.',
+        'rates.subtitle': 'Vidin\'ny hofan-trano',
+        'rates.title': 'Vidiny tena mety',
+        'rates.desc': 'Ho an\'ny trano toy izao ao amin\'ny arrondissement faha-7<sup>e</sup>, ny vidiny dia <strong class="text-charcoal font-medium">anisan\'ny mety indrindra amin\'ny manodidina</strong>.',
+        'rates.degressive_title': 'Vidiny mihena',
+        'rates.degressive_desc': 'Arakaraka ny halavan\'ny fipetrahana no ihena ny vidin\'ny alina.',
+        'rates.season_title': 'Vidiny arakaraka ny vanim-potoana',
+        'rates.season_desc': 'Miova arakaraka ny vanim-potoana amin\'ny taona ny vidiny.',
+        'rates.custom_title': 'Vidiny manokana',
+        'rates.custom_desc': 'Mifandraisa amiko miaraka amin\'ny daty tianao mba hahazoana vidiny manokana.',
+        'rates.cta': 'Hangataka vidiny',
+        'avail.subtitle': 'Handamina',
+        'avail.title': 'Fotoana malalaka',
+        'avail.desc': 'Jereo etsy ambany ny daty malalaka. Raha misy fangatahana, aza misalasala mifandray amiko mivantana.',
+        'avail.note': 'Ny daty voasakana dia manondro ny fotoana efa voaboky. Raha te hanamarina fotoana manokana, mifandraisa amiko mivantana.',
+        'contact.subtitle': 'Liana?',
+        'contact.title': 'Hanokatra ny trano',
+        'contact.desc': 'Raha te hanokatra na manana fanontaniana, mifandraisa amiko mivantana amin\'ny telefaonina, SMS na WhatsApp. Hamaly anao am-pifaliana aho.',
+        'contact.mg_label': 'Avy any Madagasikara / Ranomasimbe Indianina',
+        'contact.mg_sub': 'Azo antsoina amin\'ity laharana ity',
+        'contact.fr_label': 'Avy any Frantsa / Eoropa',
+        'contact.fr_sub': 'Laharana frantsay',
+        'contact.call': 'Hiantso',
+        'contact.sms': 'Handefa SMS',
+        'contact.languages': 'Azo antsoina amin\'ny WhatsApp, SMS sy telefaonina. Miteny frantsay, malagasy ary anglisy aho.',
+        'footer.address': 'Trano misy fanaka efitrano 3<br>75007 Paris',
+        'footer.nav': 'Fitetezana',
+        'footer.gallery': 'Galeria sary',
+        'footer.copy': 'Trano misy fanaka, Paris 7e',
       },
       fr: {
         'nav.apartment': "L'appartement",
@@ -795,6 +1026,14 @@ const recommandations = [
         'equip.item6.label': 'Lave-linge',
         'equip.item7.label': 'Entrée indépendante',
         'equip.item7.detail': "Porte cochère sur l'avenue",
+        'reviews.subtitle': 'Témoignages',
+        'reviews.title': "Ce qu'en disent nos voyageurs",
+        'reviews.r1.text': '"Un appartement magnifique, exactement comme sur les photos. L\'emplacement est parfait, à deux pas de la Tour Eiffel. Nous avons adoré le quartier et le marché. On reviendra !"',
+        'reviews.r1.origin': 'Lyon, France',
+        'reviews.r2.text': '"Emplacement parfait et appartement magnifiquement rénové. La cuisine était idéale pour cuisiner et le quartier regorge de restaurants merveilleux. Je recommande vivement !"',
+        'reviews.r2.origin': 'Londres, Royaume-Uni',
+        'reviews.r3.text': '"Trano tena tsara! Madio, feno fitaovana ary toerana tena mahafinaritra. Ny tompony dia tsara fanahy sy mora ifandraisana. Tena misy vidy tokoa."',
+        'reviews.r3.origin': 'Antananarivo, Madagascar',
         'gallery.subtitle': 'Visite virtuelle',
         'gallery.title': 'Galerie photos',
         'video.subtitle': 'Immersion',
@@ -812,6 +1051,7 @@ const recommandations = [
         'hood.line': 'Ligne 10',
         'hood.line13': 'Ligne 13',
         'hood.line6': 'Ligne 6',
+        'hood.map_title': 'Localisation',
         'reco.subtitle': 'Nos coups de cœur',
         'reco.title': 'Bonnes adresses',
         'reco.map': 'Voir sur la carte',
@@ -865,7 +1105,28 @@ const recommandations = [
       currentLang = lang;
       localStorage.setItem('lang', lang);
       document.documentElement.lang = lang;
-      document.getElementById('lang-label').textContent = lang.toUpperCase();
+      const langMeta = { fr: { label: 'FR', flag: '🇫🇷' }, en: { label: 'EN', flag: '🇬🇧' }, mg: { label: 'MG', flag: '🇲🇬' } };
+      const meta = langMeta[lang] || langMeta.fr;
+      document.getElementById('lang-label').textContent = meta.label;
+      document.getElementById('lang-flag').textContent = meta.flag;
+
+      // Update SEO meta
+      const seo = {
+        fr: { title: 'Appartement meublé Paris 7e — Proche Tour Eiffel et Invalides', desc: 'Bel appartement meublé 3 pièces à louer, Paris 7e arrondissement. Vue Tour Eiffel, quartier résidentiel prestigieux, entièrement équipé.' },
+        en: { title: 'Furnished apartment Paris 7th — Near Eiffel Tower and Invalides', desc: 'Beautiful 3-room furnished apartment for rent, Paris 7th arrondissement. Eiffel Tower view, prestigious residential area, fully equipped.' },
+        mg: { title: 'Trano misy fanaka Paris 7e — Akaikin\'ny Tour Eiffel sy Invalides', desc: 'Trano tsara tarehy misy efitrano 3 hofaina, arrondissement faha-7 Paris. Fijery Tour Eiffel, feno fitaovana.' }
+      };
+      const s = seo[lang] || seo.fr;
+      document.title = s.title;
+      const descEl = document.querySelector('meta[name="description"]');
+      if (descEl) descEl.setAttribute('content', s.desc);
+
+      // Highlight active language in dropdown
+      document.querySelectorAll('.lang-option').forEach(btn => {
+        const isActive = btn.getAttribute('data-lang') === lang;
+        btn.classList.toggle('bg-cream', isActive);
+        btn.querySelector('span:last-child').classList.toggle('text-gold', isActive);
+      });
 
       // Translate text-only elements
       document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -884,7 +1145,7 @@ const recommandations = [
       });
 
       // Update photo alt texts and captions
-      const altKey = lang === 'en' ? 'data-alt-en' : 'data-alt-fr';
+      const altKey = lang === 'mg' ? 'data-alt-mg' : lang === 'en' ? 'data-alt-en' : 'data-alt-fr';
       document.querySelectorAll('[data-alt-fr]').forEach(img => {
         const alt = img.getAttribute(altKey);
         if (alt) img.alt = alt;
@@ -895,9 +1156,36 @@ const recommandations = [
       });
     }
 
-    // Toggle language
-    document.getElementById('lang-toggle').addEventListener('click', () => {
-      setLanguage(currentLang === 'fr' ? 'en' : 'fr');
+    // Language dropdown
+    const langToggle = document.getElementById('lang-toggle');
+    const langDropdown = document.getElementById('lang-dropdown');
+    const langChevron = document.getElementById('lang-chevron');
+
+    function toggleDropdown(show) {
+      const isOpen = show !== undefined ? show : langDropdown.classList.contains('hidden');
+      langDropdown.classList.toggle('hidden', !isOpen);
+      langToggle.setAttribute('aria-expanded', isOpen);
+      langChevron.style.transform = isOpen ? 'rotate(180deg)' : '';
+    }
+
+    langToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleDropdown();
+    });
+
+    document.querySelectorAll('.lang-option').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        setLanguage(btn.getAttribute('data-lang'));
+        toggleDropdown(false);
+      });
+    });
+
+    // Close dropdown on outside click
+    document.addEventListener('click', (e) => {
+      if (!document.getElementById('lang-switcher').contains(e.target)) {
+        toggleDropdown(false);
+      }
     });
 
     // Apply saved language on load
@@ -962,7 +1250,7 @@ const recommandations = [
       const photo = photos[currentIndex];
       lightboxImg.src = photo.src;
       const lang = localStorage.getItem('lang') || 'fr';
-      const alt = lang === 'en' ? photo.altEn : photo.alt;
+      const alt = lang === 'mg' ? photo.altMg : lang === 'en' ? photo.altEn : photo.alt;
       lightboxImg.alt = alt;
       lightboxCaption.textContent = alt;
       lightboxCounter.textContent = `${currentIndex + 1} / ${photos.length}`;
