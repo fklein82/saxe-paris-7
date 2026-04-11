@@ -608,6 +608,32 @@ const recommandations = [
   </button>
 
   <script>
+    // ===== SMOOTH SCROLL FIX =====
+    // Handles anchor clicks manually to avoid layout-shift issues from lazy images/iframes
+    document.addEventListener('click', (e) => {
+      const link = e.target.closest('a[href^="#"]');
+      if (!link) return;
+      const id = link.getAttribute('href').slice(1);
+      if (!id) return;
+      const target = document.getElementById(id);
+      if (!target) return;
+      e.preventDefault();
+      const navHeight = 80;
+      const scroll = () => {
+        const top = target.getBoundingClientRect().top + window.scrollY - navHeight;
+        window.scrollTo({ top, behavior: 'smooth' });
+      };
+      scroll();
+      setTimeout(scroll, 300);
+      setTimeout(scroll, 600);
+      history.pushState(null, '', '#' + id);
+      // Close mobile menu if open
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+
     // ===== TRANSLATIONS =====
     const translations = {
       en: {
