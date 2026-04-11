@@ -1,6 +1,18 @@
-# Appartement Avenue de Saxe — Paris 7e
+# Stay in Paris 7e — Template
 
-Site vitrine pour un appartement meublé 3 pièces à louer, situé avenue de Saxe dans le 7e arrondissement de Paris.
+Template de site vitrine pour la location d'un appartement meublé. Conçu pour le 7e arrondissement de Paris, facilement adaptable à tout bien immobilier.
+
+## Fonctionnalités
+
+- Site multilingue (FR / EN / MG) avec sélecteur de langue
+- Galerie photos avec lightbox
+- Vidéo de visite (embed YouTube)
+- Calendrier Google des disponibilités
+- Section témoignages
+- Carte Google Maps
+- Contact avec WhatsApp, SMS et téléphone
+- SEO dynamique selon la langue
+- Responsive / mobile-first
 
 ## Stack
 
@@ -21,11 +33,15 @@ npm run preview      # Prévisualisation du build
 
 Le site se déploie automatiquement sur GitHub Pages via GitHub Actions à chaque push sur `main`.
 
-**URL du site** : `https://fklein82.github.io/saxe-paris-7/`
+## Personnalisation
+
+1. Remplacez les photos dans `public/images/`
+2. Modifiez les textes et traductions dans `src/pages/index.astro`
+3. Mettez à jour les numéros de téléphone et liens WhatsApp
+4. Connectez votre calendrier Google (voir ci-dessous)
+5. Adaptez la carte Google Maps à votre localisation
 
 ## Connecter le calendrier Google
-
-Pour afficher vos disponibilités, vous devez connecter un Google Agenda :
 
 ### Étape 1 : Rendre votre agenda public
 
@@ -43,22 +59,14 @@ Pour afficher vos disponibilités, vous devez connecter un Google Agenda :
 ### Étape 3 : Mettre à jour le site
 
 1. Ouvrez `src/pages/index.astro`
-2. Recherchez `YOUR_CALENDAR_ID`
-3. Remplacez-le par votre ID d'agenda
-4. Commitez et poussez — le site se mettra à jour automatiquement
-
-### Conseils
-
-- Créez un agenda dédié « Disponibilités appartement »
-- Bloquez les dates réservées dans cet agenda
-- Les visiteurs verront les créneaux libres/occupés sans détails personnels
+2. Remplacez l'ID du calendrier dans l'iframe par le vôtre
+3. Commitez et poussez — le site se mettra à jour automatiquement
 
 ## Structure du projet
 
 ```
-saxe-paris-7/
 ├── public/
-│   ├── images/          # Photos optimisées de l'appartement
+│   ├── images/          # Photos de l'appartement
 │   └── favicon.svg
 ├── src/
 │   ├── layouts/         # Layout principal
@@ -67,18 +75,3 @@ saxe-paris-7/
 ├── .github/workflows/   # Déploiement automatique
 └── astro.config.mjs     # Configuration Astro
 ```
-
-## Photos
-
-14 photos sélectionnées et optimisées parmi 58 originales :
-- Salon (4 angles différents)
-- Cuisine
-- Chambres (double + simple)
-- Salle de bain (2 vues)
-- Entrée et couloir
-- Détails architecturaux
-- Vue Tour Eiffel (jour + nuit)
-
-## Vidéo
-
-Une vidéo de visite de l'appartement est incluse (`visite-appartement.mp4`).
