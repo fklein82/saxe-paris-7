@@ -5,40 +5,40 @@ const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL :
 const img = (name: string) => `${base}images/${name}`;
 
 const photos = [
-  { src: img('salon-overview.jpg'), alt: 'Salon lumineux avec moulures haussmanniennes et cuisine ouverte' },
-  { src: img('salon-dining.jpg'), alt: 'Espace repas avec table ronde et vue sur la cuisine' },
-  { src: img('salon-sofa.jpg'), alt: 'Canapé confortable avec vue sur les arbres de l\'avenue' },
-  { src: img('salon-evening.jpg'), alt: 'Ambiance du salon en soirée' },
-  { src: img('kitchen.jpg'), alt: 'Cuisine équipée en bois et marbre' },
-  { src: img('bedroom-double.jpg'), alt: 'Chambre avec lit double' },
-  { src: img('bedroom-single.jpg'), alt: 'Chambre avec lit simple' },
-  { src: img('bathroom-main.jpg'), alt: 'Salle de bain avec douche à l\'italienne' },
-  { src: img('bathroom-washing.jpg'), alt: 'Salle de bain avec lave-linge' },
-  { src: img('entrance.jpg'), alt: 'Entrée indépendante avec porte cochère' },
-  { src: img('hallway.jpg'), alt: 'Couloir d\'entrée avec rangements' },
-  { src: img('classic-doors.jpg'), alt: 'Portes vitrées classiques haussmanniennes' },
-  { src: img('eiffel-tower-day.jpg'), alt: 'Vue sur la Tour Eiffel depuis le 7e arrondissement' },
-  { src: img('eiffel-tower-night.jpg'), alt: 'Tour Eiffel illuminée vue depuis l\'avenue' },
+  { src: img('salon-overview.jpg'), alt: 'Salon lumineux avec moulures haussmanniennes et cuisine ouverte', altEn: 'Bright living room with Haussmann mouldings and open kitchen' },
+  { src: img('salon-dining.jpg'), alt: 'Espace repas avec table ronde et vue sur la cuisine', altEn: 'Dining area with round table and kitchen view' },
+  { src: img('salon-sofa.jpg'), alt: 'Canapé confortable avec vue sur les arbres de l\'avenue', altEn: 'Comfortable sofa with view of the tree-lined avenue' },
+  { src: img('salon-evening.jpg'), alt: 'Ambiance du salon en soirée', altEn: 'Living room evening ambiance' },
+  { src: img('kitchen.jpg'), alt: 'Cuisine équipée en bois et marbre', altEn: 'Fully equipped wood and marble kitchen' },
+  { src: img('bedroom-double.jpg'), alt: 'Chambre avec lit double', altEn: 'Bedroom with double bed' },
+  { src: img('bedroom-single.jpg'), alt: 'Chambre avec lit simple', altEn: 'Bedroom with single bed' },
+  { src: img('bathroom-main.jpg'), alt: 'Salle de bain avec douche à l\'italienne', altEn: 'Bathroom with walk-in shower' },
+  { src: img('bathroom-washing.jpg'), alt: 'Salle de bain avec lave-linge', altEn: 'Bathroom with washing machine' },
+  { src: img('entrance.jpg'), alt: 'Entrée indépendante avec porte cochère', altEn: 'Private entrance with carriage door' },
+  { src: img('hallway.jpg'), alt: 'Couloir d\'entrée avec rangements', altEn: 'Entrance hallway with storage' },
+  { src: img('classic-doors.jpg'), alt: 'Portes vitrées classiques haussmanniennes', altEn: 'Classic Haussmann glass doors' },
+  { src: img('eiffel-tower-day.jpg'), alt: 'Vue sur la Tour Eiffel depuis le 7e arrondissement', altEn: 'Eiffel Tower view from the 7th arrondissement' },
+  { src: img('eiffel-tower-night.jpg'), alt: 'Tour Eiffel illuminée vue depuis l\'avenue', altEn: 'Illuminated Eiffel Tower seen from the avenue' },
 ];
 
 const equipements = [
-  { icon: '🍳', label: 'Cuisine équipée', detail: 'Four, plaques, micro-ondes' },
-  { icon: '🫧', label: 'Lave-vaisselle', detail: '' },
-  { icon: '☕', label: 'Machine Nespresso', detail: '' },
-  { icon: '📺', label: 'Télévision', detail: '' },
-  { icon: '📶', label: 'Wi-Fi fibre', detail: 'Haut débit' },
-  { icon: '🛏️', label: 'Draps & serviettes', detail: 'Fournis' },
-  { icon: '👕', label: 'Lave-linge', detail: '' },
-  { icon: '🚪', label: 'Entrée indépendante', detail: 'Porte cochère sur l\'avenue' },
+  { icon: '🍳', label: 'Cuisine équipée', labelEn: 'Fully equipped kitchen', detail: 'Four, plaques, micro-ondes', detailEn: 'Oven, hob, microwave' },
+  { icon: '🫧', label: 'Lave-vaisselle', labelEn: 'Dishwasher', detail: '', detailEn: '' },
+  { icon: '☕', label: 'Machine Nespresso', labelEn: 'Nespresso machine', detail: '', detailEn: '' },
+  { icon: '📺', label: 'Télévision', labelEn: 'Television', detail: '', detailEn: '' },
+  { icon: '📶', label: 'Wi-Fi fibre', labelEn: 'Fibre Wi-Fi', detail: 'Haut débit', detailEn: 'High speed' },
+  { icon: '🛏️', label: 'Draps & serviettes', labelEn: 'Sheets & towels', detail: 'Fournis', detailEn: 'Provided' },
+  { icon: '👕', label: 'Lave-linge', labelEn: 'Washing machine', detail: '', detailEn: '' },
+  { icon: '🚪', label: 'Entrée indépendante', labelEn: 'Private entrance', detail: 'Porte cochère sur l\'avenue', detailEn: 'Carriage door on the avenue' },
 ];
 
 const recommandations = [
-  { name: 'Le Ministère', type: 'Bistrot de quartier', desc: 'Cuisine maison et plats à emporter.', url: 'https://maps.app.goo.gl/nqh5ojrqBSLWu5AJ6?g_st=ic' },
-  { name: 'Bistrot de Breteuil', type: 'Brasserie de quartier', desc: 'Une brasserie conviviale et authentique.', url: 'https://maps.app.goo.gl/GpxxZ2TJgSXDTbbr7?g_st=ic' },
-  { name: 'Oui mon Général !', type: 'Brasserie gastronomique', desc: 'Excellente table. Réservation conseillée.', url: 'https://maps.app.goo.gl/KuYQdx6aFUM2krLx8?g_st=ic' },
-  { name: 'Le Vauban', type: 'Café avec vue', desc: 'Idéal pour un café le matin, face aux Invalides.', url: 'https://maps.app.goo.gl/p9XXfToxym8StEAp6?g_st=ic' },
-  { name: 'Boulangerie artisanale', type: 'Boulangerie', desc: 'Pain et viennoiseries d\'exception.', url: 'https://maps.app.goo.gl/wDwseX9nWKGXRMBx9?g_st=ic' },
-  { name: 'Supermarché G20', type: 'Courses', desc: 'À deux pas, prix raisonnables.', url: 'https://maps.app.goo.gl/En1RK5dUyHMmMgtP6?g_st=ic' },
+  { name: 'Le Ministère', type: 'Bistrot de quartier', typeEn: 'Local bistro', desc: 'Cuisine maison et plats à emporter.', descEn: 'Home cooking and takeaway.', url: 'https://maps.app.goo.gl/nqh5ojrqBSLWu5AJ6?g_st=ic' },
+  { name: 'Bistrot de Breteuil', type: 'Brasserie de quartier', typeEn: 'Local brasserie', desc: 'Une brasserie conviviale et authentique.', descEn: 'A friendly and authentic brasserie.', url: 'https://maps.app.goo.gl/GpxxZ2TJgSXDTbbr7?g_st=ic' },
+  { name: 'Oui mon Général !', type: 'Brasserie gastronomique', typeEn: 'Gourmet brasserie', desc: 'Excellente table. Réservation conseillée.', descEn: 'Excellent dining. Reservation recommended.', url: 'https://maps.app.goo.gl/KuYQdx6aFUM2krLx8?g_st=ic' },
+  { name: 'Le Vauban', type: 'Café avec vue', typeEn: 'Café with a view', desc: 'Idéal pour un café le matin, face aux Invalides.', descEn: 'Perfect for morning coffee, facing Les Invalides.', url: 'https://maps.app.goo.gl/p9XXfToxym8StEAp6?g_st=ic' },
+  { name: 'Boulangerie artisanale', type: 'Boulangerie', typeEn: 'Bakery', desc: 'Pain et viennoiseries d\'exception.', descEn: 'Exceptional bread and pastries.', url: 'https://maps.app.goo.gl/wDwseX9nWKGXRMBx9?g_st=ic' },
+  { name: 'Supermarché G20', type: 'Courses', typeEn: 'Groceries', desc: 'À deux pas, prix raisonnables.', descEn: 'A stone\'s throw away, reasonable prices.', url: 'https://maps.app.goo.gl/En1RK5dUyHMmMgtP6?g_st=ic' },
 ];
 ---
 
@@ -50,16 +50,21 @@ const recommandations = [
         Stay in Paris 7<sup>e</sup>
       </a>
       <div class="hidden md:flex items-center gap-8 text-sm font-medium text-warm-gray">
-        <a href="#appartement" class="hover:text-gold transition-colors">L'appartement</a>
-        <a href="#galerie" class="hover:text-gold transition-colors">Photos</a>
-        <a href="#video" class="hover:text-gold transition-colors">Vidéo</a>
-        <a href="#quartier" class="hover:text-gold transition-colors">Quartier</a>
-        <a href="#tarifs" class="hover:text-gold transition-colors">Tarifs</a>
-        <a href="#disponibilites" class="hover:text-gold transition-colors">Disponibilités</a>
+        <a href="#appartement" class="hover:text-gold transition-colors" data-i18n="nav.apartment">L'appartement</a>
+        <a href="#galerie" class="hover:text-gold transition-colors" data-i18n="nav.photos">Photos</a>
+        <a href="#video" class="hover:text-gold transition-colors" data-i18n="nav.video">Vidéo</a>
+        <a href="#quartier" class="hover:text-gold transition-colors" data-i18n="nav.neighborhood">Quartier</a>
+        <a href="#tarifs" class="hover:text-gold transition-colors" data-i18n="nav.rates">Tarifs</a>
+        <a href="#disponibilites" class="hover:text-gold transition-colors" data-i18n="nav.availability">Disponibilités</a>
         <a href="#contact" class="hover:text-gold transition-colors">Contact</a>
       </div>
       <div class="flex items-center gap-3">
-        <a href="#contact" class="bg-gold text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-gold-light transition-colors">
+        <!-- Language switcher -->
+        <button id="lang-toggle" class="flex items-center gap-1 text-sm font-medium text-warm-gray hover:text-gold transition-colors px-2 py-1 rounded-lg border border-gray-200 hover:border-gold" aria-label="Switch language">
+          <span id="lang-label">FR</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+        </button>
+        <a href="#contact" class="bg-gold text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-gold-light transition-colors" data-i18n="nav.book">
           Réserver
         </a>
         <button id="menu-toggle" class="md:hidden p-2 text-charcoal hover:text-gold transition-colors" aria-label="Ouvrir le menu">
@@ -70,12 +75,12 @@ const recommandations = [
     <!-- Mobile menu -->
     <div id="mobile-menu" class="md:hidden hidden border-t border-gray-100 bg-white/95 backdrop-blur-md">
       <div class="flex flex-col px-6 py-4 gap-3 text-sm font-medium text-warm-gray">
-        <a href="#appartement" class="py-2 hover:text-gold transition-colors mobile-menu-link">L'appartement</a>
-        <a href="#galerie" class="py-2 hover:text-gold transition-colors mobile-menu-link">Photos</a>
-        <a href="#video" class="py-2 hover:text-gold transition-colors mobile-menu-link">Vidéo</a>
-        <a href="#quartier" class="py-2 hover:text-gold transition-colors mobile-menu-link">Quartier</a>
-        <a href="#tarifs" class="py-2 hover:text-gold transition-colors mobile-menu-link">Tarifs</a>
-        <a href="#disponibilites" class="py-2 hover:text-gold transition-colors mobile-menu-link">Disponibilités</a>
+        <a href="#appartement" class="py-2 hover:text-gold transition-colors mobile-menu-link" data-i18n="nav.apartment">L'appartement</a>
+        <a href="#galerie" class="py-2 hover:text-gold transition-colors mobile-menu-link" data-i18n="nav.photos">Photos</a>
+        <a href="#video" class="py-2 hover:text-gold transition-colors mobile-menu-link" data-i18n="nav.video">Vidéo</a>
+        <a href="#quartier" class="py-2 hover:text-gold transition-colors mobile-menu-link" data-i18n="nav.neighborhood">Quartier</a>
+        <a href="#tarifs" class="py-2 hover:text-gold transition-colors mobile-menu-link" data-i18n="nav.rates">Tarifs</a>
+        <a href="#disponibilites" class="py-2 hover:text-gold transition-colors mobile-menu-link" data-i18n="nav.availability">Disponibilités</a>
         <a href="#contact" class="py-2 hover:text-gold transition-colors mobile-menu-link">Contact</a>
       </div>
     </div>
@@ -93,18 +98,18 @@ const recommandations = [
       <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60"></div>
     </div>
     <div class="relative z-10 text-center text-white px-4 max-w-3xl mx-auto">
-      <p class="text-sm sm:text-base uppercase tracking-[0.25em] mb-4 text-white/80 font-medium">Appartement meublé de charme</p>
+      <p class="text-sm sm:text-base uppercase tracking-[0.25em] mb-4 text-white/80 font-medium" data-i18n="hero.subtitle">Appartement meublé de charme</p>
       <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight mb-6">
         Paris 7<sup>e</sup>
       </h1>
-      <p class="text-lg sm:text-xl text-white/90 mb-8 font-light max-w-xl mx-auto">
+      <p class="text-lg sm:text-xl text-white/90 mb-8 font-light max-w-xl mx-auto" data-i18n-html="hero.desc">
         Sur une belle avenue du 7<sup>e</sup> arrondissement, à deux pas de la Tour Eiffel et des Invalides.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#contact" class="bg-gold hover:bg-gold-light text-white px-8 py-3.5 rounded-full text-base font-medium transition-colors">
+        <a href="#contact" class="bg-gold hover:bg-gold-light text-white px-8 py-3.5 rounded-full text-base font-medium transition-colors" data-i18n="hero.cta">
           Réserver cet appartement
         </a>
-        <a href="#appartement" class="border border-white/50 hover:bg-white/10 text-white px-8 py-3.5 rounded-full text-base font-medium transition-colors">
+        <a href="#appartement" class="border border-white/50 hover:bg-white/10 text-white px-8 py-3.5 rounded-full text-base font-medium transition-colors" data-i18n="hero.discover">
           Découvrir
         </a>
       </div>
@@ -120,10 +125,10 @@ const recommandations = [
   <section id="appartement" class="py-20 sm:py-28 px-4">
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-16">
-        <p class="text-gold uppercase tracking-[0.2em] text-sm font-medium mb-3">Bienvenue</p>
-        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-charcoal mb-6">L'appartement</h2>
+        <p class="text-gold uppercase tracking-[0.2em] text-sm font-medium mb-3" data-i18n="apt.welcome">Bienvenue</p>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-charcoal mb-6" data-i18n="apt.title">L'appartement</h2>
         <div class="w-16 h-px bg-gold mx-auto mb-8"></div>
-        <p class="text-warm-gray text-lg max-w-2xl mx-auto leading-relaxed">
+        <p class="text-warm-gray text-lg max-w-2xl mx-auto leading-relaxed" data-i18n-html="apt.desc">
           Un bel appartement meublé de 3 pièces, entièrement rénové, situé au cœur du 7<sup>e</sup> arrondissement de Paris. Lumineux, calme et fonctionnel, il offre tout le confort d'un vrai chez-soi parisien.
         </p>
       </div>
@@ -132,22 +137,22 @@ const recommandations = [
       <div class="flex flex-wrap justify-center gap-6 sm:gap-10 mb-16">
         <div class="text-center">
           <p class="text-2xl sm:text-3xl font-serif text-gold">3</p>
-          <p class="text-warm-gray text-sm">pièces</p>
+          <p class="text-warm-gray text-sm" data-i18n="apt.rooms">pièces</p>
         </div>
         <div class="hidden sm:block w-px bg-gray-200"></div>
         <div class="text-center">
           <p class="text-2xl sm:text-3xl font-serif text-gold">2</p>
-          <p class="text-warm-gray text-sm">chambres</p>
+          <p class="text-warm-gray text-sm" data-i18n="apt.bedrooms">chambres</p>
         </div>
         <div class="hidden sm:block w-px bg-gray-200"></div>
         <div class="text-center">
           <p class="text-2xl sm:text-3xl font-serif text-gold">56m²</p>
-          <p class="text-warm-gray text-sm">surface</p>
+          <p class="text-warm-gray text-sm" data-i18n="apt.area">surface</p>
         </div>
         <div class="hidden sm:block w-px bg-gray-200"></div>
         <div class="text-center">
           <p class="text-2xl sm:text-3xl font-serif text-gold">2-6</p>
-          <p class="text-warm-gray text-sm">personnes</p>
+          <p class="text-warm-gray text-sm" data-i18n="apt.guests">personnes</p>
         </div>
       </div>
 
@@ -156,16 +161,16 @@ const recommandations = [
           <img src={img('salon-dining.jpg')} alt="Salon et coin repas" class="rounded-2xl shadow-lg w-full" loading="lazy" />
         </div>
         <div class="space-y-6">
-          <h3 class="font-serif text-2xl text-charcoal">Un intérieur soigné</h3>
-          <p class="text-warm-gray leading-relaxed">
+          <h3 class="font-serif text-2xl text-charcoal" data-i18n="apt.interior_title">Un intérieur soigné</h3>
+          <p class="text-warm-gray leading-relaxed" data-i18n="apt.interior_desc1">
             L'appartement allie le charme haussmannien — moulures, parquet, hauteur sous plafond — à une rénovation contemporaine avec une cuisine ouverte en bois et marbre, une salle de bain moderne et un mobilier de qualité.
           </p>
-          <p class="text-warm-gray leading-relaxed">
+          <p class="text-warm-gray leading-relaxed" data-i18n="apt.interior_desc2">
             L'entrée est totalement indépendante, accessible directement depuis l'avenue via une belle porte cochère. Un vrai avantage pour votre intimité et votre confort.
           </p>
           <div class="flex items-center gap-2 text-gold font-medium">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-            7<sup>e</sup> arrondissement de Paris
+            <span data-i18n-html="apt.location">7<sup>e</sup> arrondissement de Paris</span>
           </div>
         </div>
       </div>
@@ -176,43 +181,43 @@ const recommandations = [
   <section class="py-20 sm:py-28 bg-cream px-4">
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-16">
-        <p class="text-gold uppercase tracking-[0.2em] text-sm font-medium mb-3">Confort</p>
-        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-charcoal mb-6">Les couchages</h2>
+        <p class="text-gold uppercase tracking-[0.2em] text-sm font-medium mb-3" data-i18n="sleep.subtitle">Confort</p>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-charcoal mb-6" data-i18n="sleep.title">Les couchages</h2>
         <div class="w-16 h-px bg-gold mx-auto mb-8"></div>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8 mb-12">
         <div class="bg-white rounded-2xl p-8 text-center shadow-sm">
           <div class="text-4xl mb-4">🛏️</div>
-          <h3 class="font-serif text-xl mb-2">Chambre principale</h3>
-          <p class="text-warm-gray">Grand lit double confortable, idéal pour un couple.</p>
+          <h3 class="font-serif text-xl mb-2" data-i18n="sleep.main_title">Chambre principale</h3>
+          <p class="text-warm-gray" data-i18n="sleep.main_desc">Grand lit double confortable, idéal pour un couple.</p>
         </div>
         <div class="bg-white rounded-2xl p-8 text-center shadow-sm">
           <div class="text-4xl mb-4">🛋️</div>
-          <h3 class="font-serif text-xl mb-2">Chambre d'appoint</h3>
-          <p class="text-warm-gray">Un lit simple dans un espace calme et cosy.</p>
+          <h3 class="font-serif text-xl mb-2" data-i18n="sleep.second_title">Chambre d'appoint</h3>
+          <p class="text-warm-gray" data-i18n="sleep.second_desc">Un lit simple dans un espace calme et cosy.</p>
         </div>
         <div class="bg-white rounded-2xl p-8 text-center shadow-sm">
           <div class="text-4xl mb-4">✨</div>
-          <h3 class="font-serif text-xl mb-2">Couchages supplémentaires</h3>
-          <p class="text-warm-gray">Lit d'appoint dépliable et matelas gonflables disponibles sur demande.</p>
+          <h3 class="font-serif text-xl mb-2" data-i18n="sleep.extra_title">Couchages supplémentaires</h3>
+          <p class="text-warm-gray" data-i18n="sleep.extra_desc">Lit d'appoint dépliable et matelas gonflables disponibles sur demande.</p>
         </div>
       </div>
 
       <div class="bg-white rounded-2xl p-8 md:p-10 shadow-sm max-w-2xl mx-auto text-center">
-        <h3 class="font-serif text-2xl mb-4 text-charcoal">Capacité d'accueil</h3>
+        <h3 class="font-serif text-2xl mb-4 text-charcoal" data-i18n="sleep.capacity_title">Capacité d'accueil</h3>
         <div class="flex flex-col sm:flex-row justify-center gap-6 sm:gap-12 mb-4">
           <div>
             <p class="text-3xl font-serif text-gold mb-1">2-3</p>
-            <p class="text-warm-gray text-sm">personnes<br><span class="font-medium text-charcoal">Confort optimal</span></p>
+            <p class="text-warm-gray text-sm" data-i18n-html="sleep.optimal">personnes<br><span class="font-medium text-charcoal">Confort optimal</span></p>
           </div>
           <div class="hidden sm:block w-px bg-gray-200"></div>
           <div>
             <p class="text-3xl font-serif text-gold mb-1">4-6</p>
-            <p class="text-warm-gray text-sm">personnes<br><span class="font-medium text-charcoal">Configuration étendue</span></p>
+            <p class="text-warm-gray text-sm" data-i18n-html="sleep.extended">personnes<br><span class="font-medium text-charcoal">Configuration étendue</span></p>
           </div>
         </div>
-        <p class="text-sm text-warm-gray mt-4">
+        <p class="text-sm text-warm-gray mt-4" data-i18n="sleep.capacity_desc">
           L'appartement est idéal pour 2 à 3 personnes. Il peut accueillir jusqu'à 6 personnes grâce aux couchages d'appoint, parfait pour un séjour en famille ou entre amis.
         </p>
       </div>
@@ -223,16 +228,16 @@ const recommandations = [
   <section class="py-20 sm:py-28 px-4">
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-16">
-        <p class="text-gold uppercase tracking-[0.2em] text-sm font-medium mb-3">Tout est prévu</p>
-        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-charcoal mb-6">Les équipements</h2>
+        <p class="text-gold uppercase tracking-[0.2em] text-sm font-medium mb-3" data-i18n="equip.subtitle">Tout est prévu</p>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-charcoal mb-6" data-i18n="equip.title">Les équipements</h2>
         <div class="w-16 h-px bg-gold mx-auto"></div>
       </div>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-        {equipements.map(eq => (
+        {equipements.map((eq, i) => (
           <div class="bg-cream rounded-xl p-6 text-center hover:shadow-md transition-shadow">
             <div class="text-3xl mb-3">{eq.icon}</div>
-            <p class="font-medium text-charcoal text-sm">{eq.label}</p>
-            {eq.detail && <p class="text-warm-gray text-xs mt-1">{eq.detail}</p>}
+            <p class="font-medium text-charcoal text-sm" data-i18n={`equip.item${i}.label`}>{eq.label}</p>
+            {eq.detail && <p class="text-warm-gray text-xs mt-1" data-i18n={`equip.item${i}.detail`}>{eq.detail}</p>}
           </div>
         ))}
       </div>
@@ -243,8 +248,8 @@ const recommandations = [
   <section id="galerie" class="py-20 sm:py-28 bg-cream px-4">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-16">
-        <p class="text-gold uppercase tracking-[0.2em] text-sm font-medium mb-3">Visite virtuelle</p>
-        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-charcoal mb-6">Galerie photos</h2>
+        <p class="text-gold uppercase tracking-[0.2em] text-sm font-medium mb-3" data-i18n="gallery.subtitle">Visite virtuelle</p>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-charcoal mb-6" data-i18n="gallery.title">Galerie photos</h2>
         <div class="w-16 h-px bg-gold mx-auto"></div>
       </div>
 
@@ -262,11 +267,13 @@ const recommandations = [
             <img
               src={photo.src}
               alt={photo.alt}
+              data-alt-fr={photo.alt}
+              data-alt-en={photo.altEn}
               class="w-full h-full object-cover aspect-[4/3] group-hover:scale-105 transition-transform duration-500"
               loading="lazy"
             />
             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-end">
-              <p class="text-white text-sm p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-medium text-left">
+              <p class="text-white text-sm p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-medium text-left photo-caption">
                 {photo.alt}
               </p>
             </div>
@@ -298,37 +305,34 @@ const recommandations = [
   <section id="video" class="py-20 sm:py-28 px-4">
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-16">
-        <p class="text-gold uppercase tracking-[0.2em] text-sm font-medium mb-3">Immersion</p>
-        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-charcoal mb-6">Visite en vidéo</h2>
+        <p class="text-gold uppercase tracking-[0.2em] text-sm font-medium mb-3" data-i18n="video.subtitle">Immersion</p>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-charcoal mb-6" data-i18n="video.title">Visite en vidéo</h2>
         <div class="w-16 h-px bg-gold mx-auto"></div>
       </div>
       <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
         <div class="flex justify-center">
           <div class="w-full max-w-[280px] sm:max-w-[320px] rounded-[2rem] overflow-hidden shadow-2xl bg-charcoal ring-4 ring-gray-200/50 max-h-[70vh] sm:max-h-none">
-            <video
-              id="apartment-video"
-              controls
-              preload="metadata"
-              playsinline
-              poster={img('salon-overview.jpg')}
-              class="w-full aspect-[9/16] object-cover"
-            >
-              <source src={img('visite-appartement.mp4')} type="video/mp4" />
-              Votre navigateur ne supporte pas la lecture vidéo.
-            </video>
+            <iframe
+              src="https://www.youtube.com/embed/mpY_4QAUeWE"
+              title="Visite de l'appartement Paris 7e"
+              class="w-full aspect-[9/16]"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
           </div>
         </div>
         <div class="text-center md:text-left space-y-6">
-          <h3 class="font-serif text-2xl text-charcoal">Parcourez l'appartement</h3>
-          <p class="text-warm-gray leading-relaxed text-lg">
+          <h3 class="font-serif text-2xl text-charcoal" data-i18n="video.explore_title">Parcourez l'appartement</h3>
+          <p class="text-warm-gray leading-relaxed text-lg" data-i18n="video.explore_desc">
             Découvrez chaque pièce de l'appartement comme si vous y étiez. Cette visite guidée vous donne un aperçu complet du séjour, de la cuisine, des chambres et de la salle de bain.
           </p>
-          <p class="text-warm-gray leading-relaxed">
+          <p class="text-warm-gray leading-relaxed" data-i18n="video.explore_cta">
             Appuyez sur lecture pour commencer la visite.
           </p>
           <a href="#contact" class="inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-white px-8 py-3.5 rounded-full font-medium transition-colors">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
-            Me contacter
+            <span data-i18n="video.contact_btn">Me contacter</span>
           </a>
         </div>
       </div>
@@ -339,20 +343,20 @@ const recommandations = [
   <section id="quartier" class="py-20 sm:py-28 bg-cream px-4">
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-16">
-        <p class="text-gold uppercase tracking-[0.2em] text-sm font-medium mb-3">Emplacement</p>
-        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-charcoal mb-6">Le quartier</h2>
+        <p class="text-gold uppercase tracking-[0.2em] text-sm font-medium mb-3" data-i18n="hood.subtitle">Emplacement</p>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-charcoal mb-6" data-i18n="hood.title">Le quartier</h2>
         <div class="w-16 h-px bg-gold mx-auto mb-8"></div>
       </div>
 
       <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
         <div class="space-y-6">
-          <p class="text-warm-gray leading-relaxed text-lg">
+          <p class="text-warm-gray leading-relaxed text-lg" data-i18n-html="hood.desc1">
             L'appartement se situe sur l'une des plus belles avenues haussmanniennes du 7<sup>e</sup> arrondissement. Large et arborée, elle offre une <strong class="text-charcoal font-medium">perspective remarquable sur la Tour Eiffel</strong>.
           </p>
-          <p class="text-warm-gray leading-relaxed text-lg">
+          <p class="text-warm-gray leading-relaxed text-lg" data-i18n-html="hood.desc2">
             Chaque semaine, le quartier accueille l'un des <strong class="text-charcoal font-medium">marchés les plus réputés de Paris</strong>, où se mêlent produits frais, artisans et ambiance typiquement parisienne.
           </p>
-          <p class="text-warm-gray leading-relaxed text-lg">
+          <p class="text-warm-gray leading-relaxed text-lg" data-i18n="hood.desc3">
             Le quartier est résidentiel, calme et élégant. À quelques pas des Invalides et du Champ de Mars, c'est un lieu privilégié pour vivre Paris comme un Parisien.
           </p>
         </div>
@@ -364,22 +368,22 @@ const recommandations = [
 
       <!-- Transports -->
       <div class="bg-white rounded-2xl p-8 md:p-10 shadow-sm mb-12">
-        <h3 class="font-serif text-2xl text-charcoal mb-6 text-center">Transports à proximité</h3>
+        <h3 class="font-serif text-2xl text-charcoal mb-6 text-center" data-i18n="hood.transport_title">Transports à proximité</h3>
         <div class="grid sm:grid-cols-3 gap-6 text-center">
           <div class="flex flex-col items-center">
             <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#e0b53e] text-white font-bold text-sm mb-2">10</span>
             <p class="font-medium text-charcoal">Ségur</p>
-            <p class="text-warm-gray text-sm">Ligne 10</p>
+            <p class="text-warm-gray text-sm" data-i18n="hood.line">Ligne 10</p>
           </div>
           <div class="flex flex-col items-center">
             <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#68b4de] text-white font-bold text-sm mb-2">13</span>
             <p class="font-medium text-charcoal">Saint-François-Xavier</p>
-            <p class="text-warm-gray text-sm">Ligne 13</p>
+            <p class="text-warm-gray text-sm" data-i18n="hood.line13">Ligne 13</p>
           </div>
           <div class="flex flex-col items-center">
             <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#76c882] text-white font-bold text-sm mb-2">6</span>
             <p class="font-medium text-charcoal">Sèvres — Lecourbe</p>
-            <p class="text-warm-gray text-sm">Ligne 6</p>
+            <p class="text-warm-gray text-sm" data-i18n="hood.line6">Ligne 6</p>
           </div>
         </div>
       </div>
@@ -390,19 +394,19 @@ const recommandations = [
   <section class="py-20 sm:py-28 px-4">
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-16">
-        <p class="text-gold uppercase tracking-[0.2em] text-sm font-medium mb-3">Nos coups de cœur</p>
-        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-charcoal mb-6">Bonnes adresses</h2>
+        <p class="text-gold uppercase tracking-[0.2em] text-sm font-medium mb-3" data-i18n="reco.subtitle">Nos coups de cœur</p>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-charcoal mb-6" data-i18n="reco.title">Bonnes adresses</h2>
         <div class="w-16 h-px bg-gold mx-auto"></div>
       </div>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {recommandations.map(r => (
+        {recommandations.map((r, i) => (
           <a href={r.url} target="_blank" rel="noopener noreferrer" class="group bg-cream rounded-xl p-6 hover:shadow-md transition-all hover:-translate-y-1">
-            <p class="text-xs uppercase tracking-wider text-gold font-medium mb-2">{r.type}</p>
+            <p class="text-xs uppercase tracking-wider text-gold font-medium mb-2" data-i18n={`reco.item${i}.type`}>{r.type}</p>
             <h3 class="font-serif text-lg text-charcoal mb-2 group-hover:text-gold transition-colors">{r.name}</h3>
-            <p class="text-warm-gray text-sm leading-relaxed">{r.desc}</p>
+            <p class="text-warm-gray text-sm leading-relaxed" data-i18n={`reco.item${i}.desc`}>{r.desc}</p>
             <p class="text-gold text-sm mt-3 font-medium flex items-center gap-1">
-              Voir sur la carte
+              <span data-i18n="reco.map">Voir sur la carte</span>
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
             </p>
           </a>
@@ -415,10 +419,10 @@ const recommandations = [
   <section id="tarifs" class="py-20 sm:py-28 bg-cream px-4">
     <div class="max-w-4xl mx-auto">
       <div class="text-center mb-16">
-        <p class="text-gold uppercase tracking-[0.2em] text-sm font-medium mb-3">Tarifs</p>
-        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-charcoal mb-6">Un tarif très avantageux</h2>
+        <p class="text-gold uppercase tracking-[0.2em] text-sm font-medium mb-3" data-i18n="rates.subtitle">Tarifs</p>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-charcoal mb-6" data-i18n="rates.title">Un tarif très avantageux</h2>
         <div class="w-16 h-px bg-gold mx-auto mb-8"></div>
-        <p class="text-warm-gray text-lg max-w-2xl mx-auto leading-relaxed">
+        <p class="text-warm-gray text-lg max-w-2xl mx-auto leading-relaxed" data-i18n-html="rates.desc">
           Pour un appartement de ce standing dans le 7<sup>e</sup> arrondissement, nos tarifs sont <strong class="text-charcoal font-medium">parmi les plus compétitifs du quartier</strong>.
         </p>
       </div>
@@ -426,24 +430,24 @@ const recommandations = [
       <div class="grid sm:grid-cols-3 gap-6 mb-10">
         <div class="bg-white rounded-2xl p-8 text-center shadow-sm">
           <div class="text-3xl mb-3">📅</div>
-          <h3 class="font-serif text-lg text-charcoal mb-2">Tarif dégressif</h3>
-          <p class="text-warm-gray text-sm leading-relaxed">Plus votre séjour est long, plus le tarif à la nuit diminue.</p>
+          <h3 class="font-serif text-lg text-charcoal mb-2" data-i18n="rates.degressive_title">Tarif dégressif</h3>
+          <p class="text-warm-gray text-sm leading-relaxed" data-i18n="rates.degressive_desc">Plus votre séjour est long, plus le tarif à la nuit diminue.</p>
         </div>
         <div class="bg-white rounded-2xl p-8 text-center shadow-sm">
           <div class="text-3xl mb-3">🌤️</div>
-          <h3 class="font-serif text-lg text-charcoal mb-2">Prix selon la saison</h3>
-          <p class="text-warm-gray text-sm leading-relaxed">Le tarif s'adapte en fonction de la période de l'année.</p>
+          <h3 class="font-serif text-lg text-charcoal mb-2" data-i18n="rates.season_title">Prix selon la saison</h3>
+          <p class="text-warm-gray text-sm leading-relaxed" data-i18n="rates.season_desc">Le tarif s'adapte en fonction de la période de l'année.</p>
         </div>
         <div class="bg-white rounded-2xl p-8 text-center shadow-sm">
           <div class="text-3xl mb-3">💬</div>
-          <h3 class="font-serif text-lg text-charcoal mb-2">Devis sur mesure</h3>
-          <p class="text-warm-gray text-sm leading-relaxed">Contactez-moi avec vos dates pour recevoir un tarif personnalisé.</p>
+          <h3 class="font-serif text-lg text-charcoal mb-2" data-i18n="rates.custom_title">Devis sur mesure</h3>
+          <p class="text-warm-gray text-sm leading-relaxed" data-i18n="rates.custom_desc">Contactez-moi avec vos dates pour recevoir un tarif personnalisé.</p>
         </div>
       </div>
 
       <div class="text-center">
         <a href="#contact" class="inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-white px-8 py-3.5 rounded-full font-medium transition-colors">
-          Demander un tarif
+          <span data-i18n="rates.cta">Demander un tarif</span>
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
         </a>
       </div>
@@ -454,10 +458,10 @@ const recommandations = [
   <section id="disponibilites" class="py-20 sm:py-28 px-4">
     <div class="max-w-4xl mx-auto">
       <div class="text-center mb-16">
-        <p class="text-gold uppercase tracking-[0.2em] text-sm font-medium mb-3">Planifier</p>
-        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-charcoal mb-6">Disponibilités</h2>
+        <p class="text-gold uppercase tracking-[0.2em] text-sm font-medium mb-3" data-i18n="avail.subtitle">Planifier</p>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-charcoal mb-6" data-i18n="avail.title">Disponibilités</h2>
         <div class="w-16 h-px bg-gold mx-auto mb-8"></div>
-        <p class="text-warm-gray text-lg max-w-xl mx-auto">
+        <p class="text-warm-gray text-lg max-w-xl mx-auto" data-i18n="avail.desc">
           Consultez les dates disponibles ci-dessous. Pour toute demande, n'hésitez pas à me contacter directement.
         </p>
       </div>
@@ -474,40 +478,41 @@ const recommandations = [
         ></iframe>
       </div>
 
-      <p class="text-center text-warm-gray text-sm mt-6">
+      <p class="text-center text-warm-gray text-sm mt-6" data-i18n="avail.note">
         Les dates bloquées indiquent les périodes déjà réservées. Pour vérifier une disponibilité précise, contactez-moi directement.
       </p>
     </div>
   </section>
 
   <!-- Contact / Réserver -->
-  <section id="contact" class="py-20 sm:py-28 bg-cream px-4">
+  <section id="contact" class="py-12 sm:py-28 bg-cream px-4">
     <div class="max-w-4xl mx-auto">
-      <div class="text-center mb-16">
-        <p class="text-gold uppercase tracking-[0.2em] text-sm font-medium mb-3">Intéressé ?</p>
-        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-charcoal mb-6">Réserver l'appartement</h2>
-        <div class="w-16 h-px bg-gold mx-auto mb-8"></div>
-        <p class="text-warm-gray text-lg max-w-xl mx-auto leading-relaxed">
+      <div class="text-center mb-8 sm:mb-16">
+        <p class="text-gold uppercase tracking-[0.2em] text-sm font-medium mb-2 sm:mb-3" data-i18n="contact.subtitle">Intéressé ?</p>
+        <h2 class="font-serif text-2xl sm:text-4xl md:text-5xl text-charcoal mb-4 sm:mb-6" data-i18n="contact.title">Réserver l'appartement</h2>
+        <div class="w-16 h-px bg-gold mx-auto mb-4 sm:mb-8"></div>
+        <p class="text-warm-gray text-base sm:text-lg max-w-xl mx-auto leading-relaxed hidden sm:block" data-i18n="contact.desc">
           Pour toute réservation ou question, contactez-moi directement par téléphone, SMS ou WhatsApp. Je vous répondrai avec plaisir dans les meilleurs délais.
         </p>
       </div>
 
-      <div class="grid sm:grid-cols-2 gap-8 mb-12">
+      <div class="grid sm:grid-cols-2 gap-4 sm:gap-8 mb-6 sm:mb-12">
         <!-- Numéro malgache -->
-        <div class="bg-cream rounded-2xl p-8 text-center shadow-sm">
-          <p class="text-sm uppercase tracking-wider text-gold font-medium mb-2">Depuis Madagascar / Océan Indien</p>
-          <p class="text-warm-gray text-xs mb-4">Joignable sur ce numéro local</p>
-          <p class="font-serif text-2xl text-charcoal mb-6">+261 33 86 206 01</p>
-          <div class="flex flex-col gap-3">
-            <a href="tel:+261338620601" class="bg-gold hover:bg-gold-light text-white py-3 px-6 rounded-full font-medium transition-colors flex items-center justify-center gap-2">
+        <div class="bg-cream rounded-2xl p-5 sm:p-8 text-center shadow-sm">
+          <p class="text-sm uppercase tracking-wider text-gold font-medium mb-1 sm:mb-2" data-i18n="contact.mg_label">Depuis Madagascar / Océan Indien</p>
+          <p class="text-warm-gray text-xs mb-2 sm:mb-4 hidden sm:block" data-i18n="contact.mg_sub">Joignable sur ce numéro local</p>
+          <p class="font-serif text-xl sm:text-2xl text-charcoal mb-3 sm:mb-6">+261 33 86 206 01</p>
+          <div class="flex flex-row sm:flex-col gap-2 sm:gap-3">
+            <a href="tel:+261338620601" class="bg-gold hover:bg-gold-light text-white py-2.5 sm:py-3 px-4 sm:px-6 rounded-full font-medium transition-colors flex items-center justify-center gap-2 flex-1 sm:flex-auto text-sm sm:text-base">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
-              Appeler
+              <span data-i18n="contact.call">Appeler</span>
             </a>
-            <a href="sms:+261338620601" class="border-2 border-gold text-gold hover:bg-gold hover:text-white py-3 px-6 rounded-full font-medium transition-colors flex items-center justify-center gap-2">
+            <a href="sms:+261338620601" class="border-2 border-gold text-gold hover:bg-gold hover:text-white py-2.5 sm:py-3 px-4 sm:px-6 rounded-full font-medium transition-colors flex items-center justify-center gap-2 flex-1 sm:flex-auto text-sm sm:text-base">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
-              Envoyer un SMS
+              <span class="hidden sm:inline" data-i18n="contact.sms">Envoyer un SMS</span>
+              <span class="sm:hidden">SMS</span>
             </a>
-            <a href="https://wa.me/261338620601" target="_blank" rel="noopener" class="bg-[#25D366] hover:bg-[#20bd5a] text-white py-3 px-6 rounded-full font-medium transition-colors flex items-center justify-center gap-2">
+            <a href="https://wa.me/261338620601" target="_blank" rel="noopener" class="bg-[#25D366] hover:bg-[#20bd5a] text-white py-2.5 sm:py-3 px-4 sm:px-6 rounded-full font-medium transition-colors flex items-center justify-center gap-2 flex-1 sm:flex-auto text-sm sm:text-base">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.332 0-4.487-.778-6.213-2.09l-.344-.28-3.57 1.197 1.197-3.57-.28-.344A9.96 9.96 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
               WhatsApp
             </a>
@@ -515,20 +520,21 @@ const recommandations = [
         </div>
 
         <!-- Numéro français -->
-        <div class="bg-cream rounded-2xl p-8 text-center shadow-sm">
-          <p class="text-sm uppercase tracking-wider text-gold font-medium mb-2">Depuis la France / Europe</p>
-          <p class="text-warm-gray text-xs mb-4">Numéro français</p>
-          <p class="font-serif text-2xl text-charcoal mb-6">+33 6 79 49 89 22</p>
-          <div class="flex flex-col gap-3">
-            <a href="tel:+33679498922" class="bg-gold hover:bg-gold-light text-white py-3 px-6 rounded-full font-medium transition-colors flex items-center justify-center gap-2">
+        <div class="bg-cream rounded-2xl p-5 sm:p-8 text-center shadow-sm">
+          <p class="text-sm uppercase tracking-wider text-gold font-medium mb-1 sm:mb-2" data-i18n="contact.fr_label">Depuis la France / Europe</p>
+          <p class="text-warm-gray text-xs mb-2 sm:mb-4 hidden sm:block" data-i18n="contact.fr_sub">Numéro français</p>
+          <p class="font-serif text-xl sm:text-2xl text-charcoal mb-3 sm:mb-6">+33 6 79 49 89 22</p>
+          <div class="flex flex-row sm:flex-col gap-2 sm:gap-3">
+            <a href="tel:+33679498922" class="bg-gold hover:bg-gold-light text-white py-2.5 sm:py-3 px-4 sm:px-6 rounded-full font-medium transition-colors flex items-center justify-center gap-2 flex-1 sm:flex-auto text-sm sm:text-base">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
-              Appeler
+              <span data-i18n="contact.call">Appeler</span>
             </a>
-            <a href="sms:+33679498922" class="border-2 border-gold text-gold hover:bg-gold hover:text-white py-3 px-6 rounded-full font-medium transition-colors flex items-center justify-center gap-2">
+            <a href="sms:+33679498922" class="border-2 border-gold text-gold hover:bg-gold hover:text-white py-2.5 sm:py-3 px-4 sm:px-6 rounded-full font-medium transition-colors flex items-center justify-center gap-2 flex-1 sm:flex-auto text-sm sm:text-base">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
-              Envoyer un SMS
+              <span class="hidden sm:inline" data-i18n="contact.sms">Envoyer un SMS</span>
+              <span class="sm:hidden">SMS</span>
             </a>
-            <a href="https://wa.me/33679498922" target="_blank" rel="noopener" class="bg-[#25D366] hover:bg-[#20bd5a] text-white py-3 px-6 rounded-full font-medium transition-colors flex items-center justify-center gap-2">
+            <a href="https://wa.me/33679498922" target="_blank" rel="noopener" class="bg-[#25D366] hover:bg-[#20bd5a] text-white py-2.5 sm:py-3 px-4 sm:px-6 rounded-full font-medium transition-colors flex items-center justify-center gap-2 flex-1 sm:flex-auto text-sm sm:text-base">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" /></svg>
               WhatsApp
             </a>
@@ -537,8 +543,8 @@ const recommandations = [
       </div>
 
       <div class="text-center">
-        <p class="text-warm-gray text-sm">
-          Disponible par WhatsApp, SMS et téléphone. Je parle français et malgache.
+        <p class="text-warm-gray text-sm" data-i18n="contact.languages">
+          Disponible par WhatsApp, SMS et téléphone. Je parle français, malgache et anglais.
         </p>
       </div>
     </div>
@@ -550,19 +556,19 @@ const recommandations = [
       <div class="grid sm:grid-cols-3 gap-8 mb-8">
         <div>
           <p class="font-serif text-lg text-white mb-3">Stay in Paris 7<sup>e</sup></p>
-          <p class="text-sm leading-relaxed">
+          <p class="text-sm leading-relaxed" data-i18n-html="footer.address">
             Appartement meublé 3 pièces<br>
             75007 Paris
           </p>
         </div>
         <div>
-          <p class="font-medium text-white mb-3">Navigation</p>
+          <p class="font-medium text-white mb-3" data-i18n="footer.nav">Navigation</p>
           <ul class="space-y-2 text-sm">
-            <li><a href="#appartement" class="hover:text-gold transition-colors">L'appartement</a></li>
-            <li><a href="#galerie" class="hover:text-gold transition-colors">Galerie photos</a></li>
-            <li><a href="#quartier" class="hover:text-gold transition-colors">Le quartier</a></li>
-            <li><a href="#tarifs" class="hover:text-gold transition-colors">Tarifs</a></li>
-            <li><a href="#disponibilites" class="hover:text-gold transition-colors">Disponibilités</a></li>
+            <li><a href="#appartement" class="hover:text-gold transition-colors" data-i18n="nav.apartment">L'appartement</a></li>
+            <li><a href="#galerie" class="hover:text-gold transition-colors" data-i18n="footer.gallery">Galerie photos</a></li>
+            <li><a href="#quartier" class="hover:text-gold transition-colors" data-i18n="hood.title">Le quartier</a></li>
+            <li><a href="#tarifs" class="hover:text-gold transition-colors" data-i18n="rates.subtitle">Tarifs</a></li>
+            <li><a href="#disponibilites" class="hover:text-gold transition-colors" data-i18n="avail.title">Disponibilités</a></li>
             <li><a href="#contact" class="hover:text-gold transition-colors">Contact</a></li>
           </ul>
         </div>
@@ -576,7 +582,7 @@ const recommandations = [
         </div>
       </div>
       <div class="border-t border-white/10 pt-8 text-center text-xs text-white/40">
-        <p>&copy; {new Date().getFullYear()} — Appartement meublé, Paris 7e</p>
+        <p>&copy; {new Date().getFullYear()} — <span data-i18n="footer.copy">Appartement meublé, Paris 7e</span></p>
       </div>
     </div>
   </footer>
@@ -600,7 +606,279 @@ const recommandations = [
   >
     <svg class="w-5 h-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" /></svg>
   </button>
+
   <script>
+    // ===== TRANSLATIONS =====
+    const translations = {
+      en: {
+        'nav.apartment': 'The apartment',
+        'nav.photos': 'Photos',
+        'nav.video': 'Video',
+        'nav.neighborhood': 'Neighborhood',
+        'nav.rates': 'Rates',
+        'nav.availability': 'Availability',
+        'nav.book': 'Book now',
+        'hero.subtitle': 'Charming furnished apartment',
+        'hero.desc': 'On a beautiful avenue in the 7<sup>th</sup> arrondissement, steps from the Eiffel Tower and Les Invalides.',
+        'hero.cta': 'Book this apartment',
+        'hero.discover': 'Discover',
+        'apt.welcome': 'Welcome',
+        'apt.title': 'The apartment',
+        'apt.desc': 'A beautiful 3-room furnished apartment, fully renovated, in the heart of Paris\' 7<sup>th</sup> arrondissement. Bright, quiet and functional, it offers all the comfort of a true Parisian home.',
+        'apt.rooms': 'rooms',
+        'apt.bedrooms': 'bedrooms',
+        'apt.area': 'floor area',
+        'apt.guests': 'guests',
+        'apt.interior_title': 'A refined interior',
+        'apt.interior_desc1': 'The apartment combines Haussmann charm — mouldings, parquet floors, high ceilings — with a contemporary renovation featuring an open wood and marble kitchen, a modern bathroom, and quality furniture.',
+        'apt.interior_desc2': 'The entrance is completely private, accessible directly from the avenue through a beautiful carriage door. A real advantage for your privacy and comfort.',
+        'apt.location': '7<sup>th</sup> arrondissement of Paris',
+        'sleep.subtitle': 'Comfort',
+        'sleep.title': 'Sleeping arrangements',
+        'sleep.main_title': 'Main bedroom',
+        'sleep.main_desc': 'Large comfortable double bed, ideal for a couple.',
+        'sleep.second_title': 'Secondary bedroom',
+        'sleep.second_desc': 'A single bed in a quiet and cosy space.',
+        'sleep.extra_title': 'Extra sleeping',
+        'sleep.extra_desc': 'Foldable extra bed and inflatable mattresses available on request.',
+        'sleep.capacity_title': 'Guest capacity',
+        'sleep.optimal': 'guests<br><span class="font-medium text-charcoal">Optimal comfort</span>',
+        'sleep.extended': 'guests<br><span class="font-medium text-charcoal">Extended configuration</span>',
+        'sleep.capacity_desc': 'The apartment is ideal for 2 to 3 guests. It can accommodate up to 6 people with extra bedding, perfect for a family or friends getaway.',
+        'equip.subtitle': 'Everything is provided',
+        'equip.title': 'Amenities',
+        'equip.item0.label': 'Fully equipped kitchen',
+        'equip.item0.detail': 'Oven, hob, microwave',
+        'equip.item1.label': 'Dishwasher',
+        'equip.item2.label': 'Nespresso machine',
+        'equip.item3.label': 'Television',
+        'equip.item4.label': 'Fibre Wi-Fi',
+        'equip.item4.detail': 'High speed',
+        'equip.item5.label': 'Sheets & towels',
+        'equip.item5.detail': 'Provided',
+        'equip.item6.label': 'Washing machine',
+        'equip.item7.label': 'Private entrance',
+        'equip.item7.detail': 'Carriage door on the avenue',
+        'gallery.subtitle': 'Virtual tour',
+        'gallery.title': 'Photo gallery',
+        'video.subtitle': 'Immersion',
+        'video.title': 'Video tour',
+        'video.explore_title': 'Explore the apartment',
+        'video.explore_desc': 'Discover each room of the apartment as if you were there. This guided tour gives you a complete overview of the living room, kitchen, bedrooms and bathroom.',
+        'video.explore_cta': 'Press play to start the tour.',
+        'video.contact_btn': 'Contact me',
+        'hood.subtitle': 'Location',
+        'hood.title': 'The neighborhood',
+        'hood.desc1': 'The apartment is located on one of the most beautiful Haussmann avenues in the 7<sup>th</sup> arrondissement. Wide and tree-lined, it offers a <strong class="text-charcoal font-medium">remarkable view of the Eiffel Tower</strong>.',
+        'hood.desc2': 'Every week, the neighborhood hosts one of <strong class="text-charcoal font-medium">Paris\' most renowned markets</strong>, with fresh produce, artisans and a typically Parisian atmosphere.',
+        'hood.desc3': 'The neighborhood is residential, quiet and elegant. Just steps from Les Invalides and the Champ de Mars, it is a privileged place to experience Paris like a Parisian.',
+        'hood.transport_title': 'Nearby transport',
+        'hood.line': 'Line 10',
+        'hood.line13': 'Line 13',
+        'hood.line6': 'Line 6',
+        'reco.subtitle': 'Our favorites',
+        'reco.title': 'Best addresses',
+        'reco.map': 'View on map',
+        'reco.item0.type': 'Local bistro',
+        'reco.item0.desc': 'Home cooking and takeaway.',
+        'reco.item1.type': 'Local brasserie',
+        'reco.item1.desc': 'A friendly and authentic brasserie.',
+        'reco.item2.type': 'Gourmet brasserie',
+        'reco.item2.desc': 'Excellent dining. Reservation recommended.',
+        'reco.item3.type': 'Café with a view',
+        'reco.item3.desc': 'Perfect for morning coffee, facing Les Invalides.',
+        'reco.item4.type': 'Bakery',
+        'reco.item4.desc': 'Exceptional bread and pastries.',
+        'reco.item5.type': 'Groceries',
+        'reco.item5.desc': 'A stone\'s throw away, reasonable prices.',
+        'rates.subtitle': 'Rates',
+        'rates.title': 'Very competitive rates',
+        'rates.desc': 'For an apartment of this standing in the 7<sup>th</sup> arrondissement, our rates are <strong class="text-charcoal font-medium">among the most competitive in the area</strong>.',
+        'rates.degressive_title': 'Degressive pricing',
+        'rates.degressive_desc': 'The longer your stay, the lower the nightly rate.',
+        'rates.season_title': 'Seasonal pricing',
+        'rates.season_desc': 'Rates adapt according to the time of year.',
+        'rates.custom_title': 'Custom quote',
+        'rates.custom_desc': 'Contact me with your dates to receive a personalized rate.',
+        'rates.cta': 'Request a quote',
+        'avail.subtitle': 'Plan ahead',
+        'avail.title': 'Availability',
+        'avail.desc': 'Check available dates below. For any enquiry, feel free to contact me directly.',
+        'avail.note': 'Blocked dates indicate periods already booked. To check a specific availability, contact me directly.',
+        'contact.subtitle': 'Interested?',
+        'contact.title': 'Book the apartment',
+        'contact.desc': 'For any booking or question, contact me directly by phone, SMS or WhatsApp. I will gladly respond as soon as possible.',
+        'contact.mg_label': 'From Madagascar / Indian Ocean',
+        'contact.mg_sub': 'Reachable on this local number',
+        'contact.fr_label': 'From France / Europe',
+        'contact.fr_sub': 'French number',
+        'contact.call': 'Call',
+        'contact.sms': 'Send SMS',
+        'contact.languages': 'Available via WhatsApp, SMS and phone. I speak French, Malagasy and English.',
+        'footer.address': 'Furnished 3-room apartment<br>75007 Paris',
+        'footer.nav': 'Navigation',
+        'footer.gallery': 'Photo gallery',
+        'footer.copy': 'Furnished apartment, Paris 7th',
+      },
+      fr: {
+        'nav.apartment': "L'appartement",
+        'nav.photos': 'Photos',
+        'nav.video': 'Vidéo',
+        'nav.neighborhood': 'Quartier',
+        'nav.rates': 'Tarifs',
+        'nav.availability': 'Disponibilités',
+        'nav.book': 'Réserver',
+        'hero.subtitle': 'Appartement meublé de charme',
+        'hero.desc': 'Sur une belle avenue du 7<sup>e</sup> arrondissement, à deux pas de la Tour Eiffel et des Invalides.',
+        'hero.cta': 'Réserver cet appartement',
+        'hero.discover': 'Découvrir',
+        'apt.welcome': 'Bienvenue',
+        'apt.title': "L'appartement",
+        'apt.desc': "Un bel appartement meublé de 3 pièces, entièrement rénové, situé au cœur du 7<sup>e</sup> arrondissement de Paris. Lumineux, calme et fonctionnel, il offre tout le confort d'un vrai chez-soi parisien.",
+        'apt.rooms': 'pièces',
+        'apt.bedrooms': 'chambres',
+        'apt.area': 'surface',
+        'apt.guests': 'personnes',
+        'apt.interior_title': 'Un intérieur soigné',
+        'apt.interior_desc1': "L'appartement allie le charme haussmannien — moulures, parquet, hauteur sous plafond — à une rénovation contemporaine avec une cuisine ouverte en bois et marbre, une salle de bain moderne et un mobilier de qualité.",
+        'apt.interior_desc2': "L'entrée est totalement indépendante, accessible directement depuis l'avenue via une belle porte cochère. Un vrai avantage pour votre intimité et votre confort.",
+        'apt.location': '7<sup>e</sup> arrondissement de Paris',
+        'sleep.subtitle': 'Confort',
+        'sleep.title': 'Les couchages',
+        'sleep.main_title': 'Chambre principale',
+        'sleep.main_desc': 'Grand lit double confortable, idéal pour un couple.',
+        'sleep.second_title': "Chambre d'appoint",
+        'sleep.second_desc': 'Un lit simple dans un espace calme et cosy.',
+        'sleep.extra_title': 'Couchages supplémentaires',
+        'sleep.extra_desc': "Lit d'appoint dépliable et matelas gonflables disponibles sur demande.",
+        'sleep.capacity_title': "Capacité d'accueil",
+        'sleep.optimal': 'personnes<br><span class="font-medium text-charcoal">Confort optimal</span>',
+        'sleep.extended': 'personnes<br><span class="font-medium text-charcoal">Configuration étendue</span>',
+        'sleep.capacity_desc': "L'appartement est idéal pour 2 à 3 personnes. Il peut accueillir jusqu'à 6 personnes grâce aux couchages d'appoint, parfait pour un séjour en famille ou entre amis.",
+        'equip.subtitle': 'Tout est prévu',
+        'equip.title': 'Les équipements',
+        'equip.item0.label': 'Cuisine équipée',
+        'equip.item0.detail': 'Four, plaques, micro-ondes',
+        'equip.item1.label': 'Lave-vaisselle',
+        'equip.item2.label': 'Machine Nespresso',
+        'equip.item3.label': 'Télévision',
+        'equip.item4.label': 'Wi-Fi fibre',
+        'equip.item4.detail': 'Haut débit',
+        'equip.item5.label': 'Draps & serviettes',
+        'equip.item5.detail': 'Fournis',
+        'equip.item6.label': 'Lave-linge',
+        'equip.item7.label': 'Entrée indépendante',
+        'equip.item7.detail': "Porte cochère sur l'avenue",
+        'gallery.subtitle': 'Visite virtuelle',
+        'gallery.title': 'Galerie photos',
+        'video.subtitle': 'Immersion',
+        'video.title': 'Visite en vidéo',
+        'video.explore_title': "Parcourez l'appartement",
+        'video.explore_desc': "Découvrez chaque pièce de l'appartement comme si vous y étiez. Cette visite guidée vous donne un aperçu complet du séjour, de la cuisine, des chambres et de la salle de bain.",
+        'video.explore_cta': 'Appuyez sur lecture pour commencer la visite.',
+        'video.contact_btn': 'Me contacter',
+        'hood.subtitle': 'Emplacement',
+        'hood.title': 'Le quartier',
+        'hood.desc1': "L'appartement se situe sur l'une des plus belles avenues haussmanniennes du 7<sup>e</sup> arrondissement. Large et arborée, elle offre une <strong class=\"text-charcoal font-medium\">perspective remarquable sur la Tour Eiffel</strong>.",
+        'hood.desc2': "Chaque semaine, le quartier accueille l'un des <strong class=\"text-charcoal font-medium\">marchés les plus réputés de Paris</strong>, où se mêlent produits frais, artisans et ambiance typiquement parisienne.",
+        'hood.desc3': "Le quartier est résidentiel, calme et élégant. À quelques pas des Invalides et du Champ de Mars, c'est un lieu privilégié pour vivre Paris comme un Parisien.",
+        'hood.transport_title': 'Transports à proximité',
+        'hood.line': 'Ligne 10',
+        'hood.line13': 'Ligne 13',
+        'hood.line6': 'Ligne 6',
+        'reco.subtitle': 'Nos coups de cœur',
+        'reco.title': 'Bonnes adresses',
+        'reco.map': 'Voir sur la carte',
+        'reco.item0.type': 'Bistrot de quartier',
+        'reco.item0.desc': 'Cuisine maison et plats à emporter.',
+        'reco.item1.type': 'Brasserie de quartier',
+        'reco.item1.desc': 'Une brasserie conviviale et authentique.',
+        'reco.item2.type': 'Brasserie gastronomique',
+        'reco.item2.desc': 'Excellente table. Réservation conseillée.',
+        'reco.item3.type': 'Café avec vue',
+        'reco.item3.desc': 'Idéal pour un café le matin, face aux Invalides.',
+        'reco.item4.type': 'Boulangerie',
+        'reco.item4.desc': "Pain et viennoiseries d'exception.",
+        'reco.item5.type': 'Courses',
+        'reco.item5.desc': 'À deux pas, prix raisonnables.',
+        'rates.subtitle': 'Tarifs',
+        'rates.title': 'Un tarif très avantageux',
+        'rates.desc': 'Pour un appartement de ce standing dans le 7<sup>e</sup> arrondissement, nos tarifs sont <strong class="text-charcoal font-medium">parmi les plus compétitifs du quartier</strong>.',
+        'rates.degressive_title': 'Tarif dégressif',
+        'rates.degressive_desc': 'Plus votre séjour est long, plus le tarif à la nuit diminue.',
+        'rates.season_title': 'Prix selon la saison',
+        'rates.season_desc': "Le tarif s'adapte en fonction de la période de l'année.",
+        'rates.custom_title': 'Devis sur mesure',
+        'rates.custom_desc': 'Contactez-moi avec vos dates pour recevoir un tarif personnalisé.',
+        'rates.cta': 'Demander un tarif',
+        'avail.subtitle': 'Planifier',
+        'avail.title': 'Disponibilités',
+        'avail.desc': "Consultez les dates disponibles ci-dessous. Pour toute demande, n'hésitez pas à me contacter directement.",
+        'avail.note': 'Les dates bloquées indiquent les périodes déjà réservées. Pour vérifier une disponibilité précise, contactez-moi directement.',
+        'contact.subtitle': 'Intéressé ?',
+        'contact.title': "Réserver l'appartement",
+        'contact.desc': 'Pour toute réservation ou question, contactez-moi directement par téléphone, SMS ou WhatsApp. Je vous répondrai avec plaisir dans les meilleurs délais.',
+        'contact.mg_label': 'Depuis Madagascar / Océan Indien',
+        'contact.mg_sub': 'Joignable sur ce numéro local',
+        'contact.fr_label': 'Depuis la France / Europe',
+        'contact.fr_sub': 'Numéro français',
+        'contact.call': 'Appeler',
+        'contact.sms': 'Envoyer un SMS',
+        'contact.languages': 'Disponible par WhatsApp, SMS et téléphone. Je parle français, malgache et anglais.',
+        'footer.address': 'Appartement meublé 3 pièces<br>75007 Paris',
+        'footer.nav': 'Navigation',
+        'footer.gallery': 'Galerie photos',
+        'footer.copy': 'Appartement meublé, Paris 7e',
+      }
+    };
+
+    // Language state
+    let currentLang = localStorage.getItem('lang') || 'fr';
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('lang', lang);
+      document.documentElement.lang = lang;
+      document.getElementById('lang-label').textContent = lang.toUpperCase();
+
+      // Translate text-only elements
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+
+      // Translate HTML elements (with sup, strong, br, etc.)
+      document.querySelectorAll('[data-i18n-html]').forEach(el => {
+        const key = el.getAttribute('data-i18n-html');
+        if (translations[lang][key]) {
+          el.innerHTML = translations[lang][key];
+        }
+      });
+
+      // Update photo alt texts and captions
+      const altKey = lang === 'en' ? 'data-alt-en' : 'data-alt-fr';
+      document.querySelectorAll('[data-alt-fr]').forEach(img => {
+        const alt = img.getAttribute(altKey);
+        if (alt) img.alt = alt;
+      });
+      document.querySelectorAll('.photo-caption').forEach((caption, i) => {
+        const img = caption.closest('button')?.querySelector('img');
+        if (img) caption.textContent = img.alt;
+      });
+    }
+
+    // Toggle language
+    document.getElementById('lang-toggle').addEventListener('click', () => {
+      setLanguage(currentLang === 'fr' ? 'en' : 'fr');
+    });
+
+    // Apply saved language on load
+    if (currentLang !== 'fr') {
+      setLanguage(currentLang);
+    }
+
     // Mobile menu toggle
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -657,8 +935,10 @@ const recommandations = [
     function updateLightbox() {
       const photo = photos[currentIndex];
       lightboxImg.src = photo.src;
-      lightboxImg.alt = photo.alt;
-      lightboxCaption.textContent = photo.alt;
+      const lang = localStorage.getItem('lang') || 'fr';
+      const alt = lang === 'en' ? photo.altEn : photo.alt;
+      lightboxImg.alt = alt;
+      lightboxCaption.textContent = alt;
       lightboxCounter.textContent = `${currentIndex + 1} / ${photos.length}`;
     }
 
