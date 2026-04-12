@@ -21,6 +21,15 @@ const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL :
   <meta property="og:locale:alternate" content="en_GB" />
   <meta property="og:locale:alternate" content="mg_MG" />
 
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MZ1JR8RW5K"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MZ1JR8RW5K');
+  </script>
+
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
 
